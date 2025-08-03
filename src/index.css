@@ -6,15 +6,15 @@
 /*  Inter Fonts */
 @font-face {
   font-family: InterRegular18;
-  src: url("/fonts/Inter/Inter_18pt-Regular.ttf");
+  src: url("/assets/fonts/Inter/Inter_18pt-Regular.ttf");
 }
 @font-face {
   font-family: InterRegular24;
-  src: url("/fonts/Inter/Inter_24pt-Regular.ttf");
+  src: url("/assets/fonts/Inter/Inter_24pt-Regular.ttf");
 }
 @font-face {
   font-family: InterRegular28;
-  src: url("/fonts/Inter/Inter_28pt-Regular.ttf");
+  src: url("/assets/fonts/Inter/Inter_28pt-Regular.ttf");
 }
 .InterRegular18 {
   font-family: InterRegular18;
@@ -28,19 +28,19 @@
 /*  Lexend Fonts */
 @font-face {
   font-family: LexendLight;
-  src: url("/fonts/Lexend/Lexend-Light.ttf");
+  src: url("/assets/fonts/Lexend/Lexend-Light.ttf");
 }
 @font-face {
   font-family: LexendRegular;
-  src: url("/fonts/Lexend/Lexend-Regular.ttf");
+  src: url("/assets/fonts/Lexend/Lexend-Regular.ttf");
 }
 @font-face {
   font-family: LexendMedium;
-  src: url("/fonts/Lexend/Lexend-Medium.ttf");
+  src: url("/assets/fonts/Lexend/Lexend-Medium.ttf");
 }
 @font-face {
   font-family: LexendSemiBold;
-  src: url("/fonts/Lexend/Lexend-SemiBold.ttf");
+  src: url("/assets/fonts/Lexend/Lexend-SemiBold.ttf");
 }
 .LexendLight {
   font-family: LexendLight;
