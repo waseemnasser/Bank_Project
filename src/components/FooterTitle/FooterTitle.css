@@ -11,6 +11,7 @@
     display: flex;
     gap: 150px; 
     align-items: center;
+    justify-content: space-between;
     color: var(--text-color);
     position: relative;
     img{
@@ -19,6 +20,8 @@
             position: absolute;
             left: 0;
             top: 0;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
         }
     .title{
         h3{
@@ -37,7 +40,8 @@
             font-size: 18px; 
         }
     }
-    button{
+    .linkFooterTitle{
+        text-decoration: none;
         background-color: var(--button-keyworld-color);
         padding: 18px 30px;
         border-radius: 82px;
