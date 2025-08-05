@@ -11,8 +11,7 @@
   --tenth-color  :  #191919 ;
   --card-title-color : #4C4C4D ;
   --input-color : #59595A  ;
-
-
+}
 * {
   margin: 0;
   padding: 0;
@@ -68,4 +67,21 @@
 }
 .LexendSemiBold {
   font-family: LexendSemiBold;
+}
+
+.white-space{
+  margin-left: 8.4375vw;
+  margin-right: 8.4375vw;
+}
+@media screen and (max-width:1440px){
+  .white-space{
+    margin-left: 5.5555vw;
+    margin-right: 5.5555vw;
+  }
+}
+@media screen and (max-width:992px){
+  .white-space{
+    margin-left: 3.0769vw;
+    margin-right: 3.0769vw;
+  }
 }
