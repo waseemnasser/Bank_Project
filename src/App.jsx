@@ -9,17 +9,18 @@ import About from './pages/About';
 
 function App() {
   return (
-    <Routes>
-      <Route path='/'>
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/careers" element={<Careers />} />
-        <Route path="/security" element={<Security />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signUp" element={<SignUp />} />
-      </Route>
-    </Routes>
-
+    <>
+      <Routes>
+        <Route path='/'>
+          <Route index element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/security" element={<Security />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signUp" element={<SignUp />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
