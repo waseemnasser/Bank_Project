@@ -1,0 +1,95 @@
+nav{
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27.5px 34px !important;
+    border-radius: 100px;
+    position: relative;
+    .ss-navUl{
+        list-style: none;
+        display: flex;
+        li{
+            margin-right: 26px !important;
+            a{
+                color: white;
+                text-decoration: none;
+            }   
+        }
+        .ss-link-active{
+            background-color: var(--second-color);
+            padding: 12px 24px;
+            border-radius: 82px;
+        }
+    }
+    .ss-buttonsDiv{
+        button{
+            background:none;
+            border: none;
+            a{
+                text-decoration: none;
+                font-size: 18px;
+                color: white;
+            }
+        }
+        button:first-of-type{
+            margin-right: 30px;
+        }
+        .ss-button-active{
+            color: var(--primary-color);
+            background-color: var(--button-keyworld-color);
+            border-radius: 82px;
+            padding: 14px 30px;
+        }
+    }
+    .menu{
+        display: none;
+        background: none;
+        border: none;
+    }
+    .ss-mobile-nav{
+    background-color: var(--primary-color);
+    padding: 16px;
+    width: 200px;
+    text-align: center;
+    border-radius: 20px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    .ss-mobile-navList{
+        list-style: none;
+        li{
+            margin: 16px 0;
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+        .ss-link-active{
+            background-color: var(--second-color);
+            padding: 12px 24px;
+            border-radius: 82px;
+        }
+        
+    }
+    }
+}
+
+
+@media screen and (max-width:992px) {
+    nav{
+        .menu{
+            display: block;
+        }
+        .ss-navUl , .ss-buttonsDiv{
+            display: none;
+        }
+        .ss-mobile-nav.ss-show{
+            display: block;
+        }
+        .ss-mobile-nav.ss-notShow{
+            display: none;
+        }
+    }
+}
