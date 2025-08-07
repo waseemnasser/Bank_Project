@@ -1,0 +1,63 @@
+.aa-filter{
+  width: 308px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  padding:50px 50px;
+}
+.aa-filter-button{
+  all: unset;
+  margin-bottom: 24px;
+  width: 208px;
+  text-align: center;
+  background-color: var(--third-color);
+  padding: 18px 0px;
+  border: 1px solid var(  --second-color );
+  border-radius: 100px;
+  color: var(--text-color );
+  white-space: nowrap;
+  
+}
+.aa-filter-button:hover{
+  color: var(--button-keyworld-color);
+
+}
+
+@media screen and (max-width:1440px) {
+  .aa-filter{
+   width: 245px;
+   padding: 40px 40px;
+  }
+}
+@media screen and (max-width:992px){
+  .aa-features-filter{
+       width: 93vw;
+    display: flex;
+    flex-direction: row;
+    overflow:hidden;
+  }
+  .aa-filter::-webkit-scrollbar{
+    display: none;
+  }
+  .aa-filter-button{
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    padding: 14px 20px ;
+    margin-bottom: 0;
+  }
+  .aa-filter{
+    overflow-x:scroll;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+  }
+
+}
