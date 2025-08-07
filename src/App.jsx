@@ -6,10 +6,12 @@ import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Security from './pages/Security';
 import About from './pages/About';
+import NavBar from "./components/navBar/NavBar"
 
 function App() {
   return (
     <>
+    <NavBar/>
       <Routes>
         <Route path='/'>
           <Route index element={<Home />} />
