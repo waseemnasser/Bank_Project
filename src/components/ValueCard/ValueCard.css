@@ -1,0 +1,24 @@
+.VC-Container{
+     width: 39.4791vw;
+     height: 10.3125vw;
+     padding-left: 30px;
+     gap: 30px;
+     border-left: 10px solid var(--button-keyworld-color );
+
+}
+h3{
+    width: 37.9166px;
+    height: 4.5312px;
+    font-weight: 500;
+    font-size: 58px;
+    color:var( --card-title-color);
+    line-height: 150%;
+    padding: 30px; 
+}
+p{
+    width: 37.9166px;
+    height: 4.2187px;
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--paragraph-color);
+}
