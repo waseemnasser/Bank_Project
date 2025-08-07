@@ -1,0 +1,121 @@
+.aa-general-ul{
+display: flex;
+list-style: none;
+flex-wrap: wrap;
+align-items: center;
+}
+
+
+footer{
+ background-color:var( --primary-color);
+}
+
+.aa-footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 83%;
+  margin: 0 auto;
+  padding: 100px 0;
+  row-gap: clamp(24px,4vw,50px);
+}
+.aa-ul{
+max-width: 370px;
+column-gap: clamp(14px,14px,26px);
+}
+.aa-general-ul a{
+  color: var(  --hero-paragraph-color );
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+img{
+  width:155.83px;
+}
+.aa-border-bottom{
+border-bottom: 1px solid var(  --second-color);
+width: 100%;
+}
+.aa-general-ul a img{
+  width: 20px;
+  margin-right: 6px;
+}
+.aa-ul-gap{
+  gap: 20px;
+}
+.aa-footer-icon{
+width: 24px;
+
+}
+.aa-footer-social-ul{
+  margin: 16px 0px 16px 16px;
+}
+.aa-footer-description{
+  margin: 28px 30px 28px 0px;
+}
+.aa-footer-social{
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--button-keyworld-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 14px;
+}
+.aa-footer-social a img{
+  margin: 0;
+  padding: 0;
+}
+.Terms-of-Service{
+  width: 83%;
+  color:var(  --paragraph-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+  border: 1px solid var(   --second-color);
+  border-radius: 100px;
+  background-color: var(  --third-color);
+}
+.aa-footer-description{
+  white-space: nowrap;
+}
+.aa-footer-border{
+margin: 0 8px;
+border:1px solid var(--paragraph-color);
+
+}
+@media screen and (max-width:1440px) {
+  .aa-ul a{
+    font-size: 14px;
+  }
+  .aa-general-ul{
+    justify-content: center;
+  }
+
+
+}
+@media screen and (max-width: 992px) {
+  .Terms-of-Service{
+    flex-direction: column;
+    align-items: center;
+      text-align: center;
+      position: relative;
+      padding: 50px;
+      border-radius: 12px;
+  }
+  .aa-footer-social-ul{
+    position: absolute;
+    top: -26px;
+  }
+  .aa-footer-description{
+    font-size: 14px;
+    text-align: center;
+    margin: 20px auto
+  }
+
+.aa-descriptions-footer{
+   margin-top: 26px;
+}
+}
