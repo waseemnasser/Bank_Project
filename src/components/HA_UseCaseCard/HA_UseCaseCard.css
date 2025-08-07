@@ -1,0 +1,42 @@
+.useCaseCard {
+  width: 314px;
+  height: 222px;
+  background-color: var(--third-color);
+  padding: 30px;
+  border: 1px solid var(--second-color);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  .shadow {
+    padding: 10px;
+    border-radius: 50%;
+    background: linear-gradient(
+      to bottom,
+      var(--button-keyworld-color) -800%,
+      var(--button-keyworld-color) -800%,
+      transparent
+    );
+    .border {
+      border: 1 solid var(--input-color);
+      background: linear-gradient(
+        to bottom,
+        var(--button-keyworld-color) -800%,
+        var(--button-keyworld-color) -800%,
+        transparent
+      );
+      border-radius: 50%;
+      padding: 10px;
+      .image {
+        font-size: 20px;
+      }
+    }
+  }
+  .des {
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+  }
+}
