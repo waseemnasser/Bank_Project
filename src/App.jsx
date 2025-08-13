@@ -7,11 +7,12 @@ import SignUp from './pages/SignUp';
 import Security from './pages/Security';
 import About from './pages/About';
 import NavBar from "./components/navBar/NavBar"
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <>
-    <NavBar/>
+    <div className="app">
+      <NavBar />
       <Routes>
         <Route path='/'>
           <Route index element={<Home />} />
@@ -22,7 +23,7 @@ function App() {
           <Route path="/signUp" element={<SignUp />} />
         </Route>
       </Routes>
-    </>
+    </div>
   );
 }
 

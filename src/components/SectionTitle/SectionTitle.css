@@ -1,34 +1,44 @@
-.ST-backgroun{
-    background-color: var(--third-color);
+.ST-backgroun {
     padding-bottom: 100px;
 }
-.ST-container{
+
+.ST-container {
     display: flex;
     justify-content: space-between;
-    gap: 300px;
-    .ST-title{
-        max-width: 47.3958vw;
-        h1{
+    margin-top: 150px;
+
+    .ST-title {
+        h1 {
             height: 72px;
             font-weight: 500;
             font-size: 48px;
             line-height: 150%;
             margin-bottom: 14px;
-            .whitetitle{
+
+            .whitetitle {
                 color: var(--text-color);
             }
-            .greentitle{
+
+            .greentitle {
                 color: var(--button-keyworld-color);
             }
         }
-        p{
+
+        p {
             color: var(--paragraph-color);
-            font-weight: 300;
             font-size: 18px;
-            line-height: 150%;
         }
     }
-    .filter-IB{
+
+    .ST-title.ss-width {
+        max-width: 47.3958vw;
+    }
+
+    .ST-title.ss-width100 {
+        max-width: 100%;
+    }
+
+    .filter-IB {
         align-self: flex-end;
         max-width: 386px;
         background-color: var(--primary-color);
@@ -36,10 +46,11 @@
         border-radius: 82px;
         border: 1px solid var(--second-color);
         padding: 14px;
-        display: flex; 
-        justify-content: center; 
+        display: flex;
+        justify-content: center;
         align-items: center;
-        button{
+
+        button {
             width: 177px;
             height: 55px;
             border: none;
@@ -54,37 +65,46 @@
             line-height: 150%;
             color: var(--text-color);
         }
-        .filter-active{
-                background-color: var(--button-keyworld-color);
-                color: var(--primary-color);
-            }
+
+        .filter-active {
+            background-color: var(--button-keyworld-color);
+            color: var(--primary-color);
+        }
     }
 }
-.hidden{
+
+.hidden {
     display: none;
 }
-@media screen and (max-width:1440px){
-    .ST-backgroun{
+
+@media screen and (max-width:1440px) {
+    .ST-backgroun {
         padding-bottom: 80px;
     }
-    .ST-container{
-        gap: 150px;
-        .ST-title{
-            max-width: 57.7083vw;
-            h1{
+
+    .ST-container {
+        .ST-title {
+            h1 {
                 height: 57px;
                 font-size: 38px;
                 margin-bottom: 10px;
             }
-            p{
+
+            p {
                 font-size: 14px;
             }
         }
-        .filter-IB{
+
+        ST-title.ss-width {
+            max-width: 57.7083vw;
+        }
+
+        .filter-IB {
             max-width: 299px;
             height: 65px;
             padding: 12px;
-            button{
+
+            button {
                 width: 136px;
                 height: 41px;
                 font-size: 14px;
@@ -92,35 +112,47 @@
         }
     }
 }
-@media screen and (max-width:992px){
-    .ST-backgroun{
+
+@media screen and (max-width:992px) {
+    .ST-backgroun {
         padding-bottom: 40px;
     }
-    .ST-container{
+
+    .ST-container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         text-align: center;
+        width: 100%;
         gap: 20px;
-        .ST-title{
+
+        .ST-title {
             max-width: 100%;
-            h1{
+
+            h1 {
                 height: 42px;
                 font-size: 28px;
             }
-            p{
+
+            p {
                 font-size: 14px;
             }
         }
-        .filter-IB{
-            align-self:center;
+
+        .ST-title.ss-width {
+            max-width: 100%;
+        }
+
+        .filter-IB {
+            align-self: center;
             max-width: 299px;
             height: 65px;
-            .filter-active{
-                    background-color: var(--button-keyworld-color);
-                    color: var(--primary-color);
-                }
+
+            .filter-active {
+                background-color: var(--button-keyworld-color);
+                color: var(--primary-color);
+            }
         }
     }
 }

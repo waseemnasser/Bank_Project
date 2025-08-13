@@ -1,5 +1,5 @@
 import "./FeaturesFilter.css"
-export default function FeaturesFilter() {
+function FeaturesFilter() {
   return (
     <div className="aa-features-filter">
       <div className="aa-filter LexendRegular">
@@ -13,3 +13,4 @@ export default function FeaturesFilter() {
     </div>
   )
 }
+export default FeaturesFilter
