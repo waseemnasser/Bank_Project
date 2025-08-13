@@ -1,16 +1,18 @@
-import React from 'react'
-import "./iconShape.css"
+import "./iconShape.css";
 
-const IconShape = ({icon}) => {
-    return(
-        <div className="ss-icon-container">
+function IconShape(icon, size = 98, className = "") {
+    return (
+        <div
+            className={`ss-icon-container ${className}`}
+            style={{ "--icon-size": `${size}px` }}
+        >
             <div className="ss-big-circle">
                 <div className="ss-circle">
-                    <img src={icon} alt="icon"/>
+                    <img src={icon} alt="icon" />
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default IconShape
+export default IconShape;

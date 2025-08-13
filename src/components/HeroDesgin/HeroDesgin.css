@@ -1,7 +1,7 @@
-.rh-hero{
+.rh-hero {
   position: relative;
   height: calc(100vh-95px);
-  background-color: var( --primary-color);
+  background-color: var(--primary-color);
   background-image: url("/assets/images/Abstract Design/Abstract Design.png");
   background-position: right top;
   background-repeat: no-repeat;
@@ -9,35 +9,38 @@
   padding: 50px;
 }
 
-.rh-description{
-   background-color: var( --third-color) ;
-   width: 41.197vw;
-   border-radius: 20px 0 80px 20px;
-   padding: 50px;
-   height: fit-content;
-   position: absolute;
-   z-index: 2;
-   left: 80px;
-   h1{
-     color: var(--text-color);
-     font-size: 30px;
-     margin-bottom: 24px;
-   }
-   p{
-     color: var(--paragraph-color);
-   }
-   .highlighted-text {
-    color: var(--button-keyworld-color );
-}
+.rh-description {
+  background-color: var(--third-color);
+  width: 41.197vw;
+  border-radius: 20px 0 80px 20px;
+  padding: 50px;
+  height: fit-content;
+  position: absolute;
+  z-index: 2;
+  left: 80px;
+
+  h1 {
+    color: var(--text-color);
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
+
+  p {
+    color: var(--paragraph-color);
+  }
+
+  .highlighted-text {
+    color: var(--button-keyworld-color);
+  }
 
 }
-.rh-img{
+
+.rh-img {
   position: absolute;
   z-index: 1;
   right: 80px;
-  img{
+
+  img {
     width: 50.4166vw;
   }
 }
-
-

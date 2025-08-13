@@ -1,0 +1,7 @@
+.app {
+    background-color: var(--third-color);
+    padding-top: 30px;
+    background-image: url("/assets/images/AbstractDesign/heroAbstract");
+    background-repeat: no-repeat;
+    background-position: top left;
+}

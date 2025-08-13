@@ -1,12 +1,11 @@
 import "./FooterTitle.css"
 import  {Link}  from "react-router-dom"
-import Abstract from "/public/assets/images/Abstract Design/Abstract Design.png"
 
-export const FooterTitle = ({title, paragraph}) => {
+function FooterTitle (title, paragraph) {
   return (
     <div className="FT-background"> 
       <div className="FooterTitle white-space">
-        <img src={Abstract} alt="Abstract Design" />
+        <img src="./assets/images/AbstractDesign/AbstractDesign.png"/>
           <div className="title">
             <h3 className="LexendRegular">{title} <span>YourBank today!</span></h3>
             <p className="LexendLight">{paragraph}</p>
@@ -16,3 +15,5 @@ export const FooterTitle = ({title, paragraph}) => {
     </div>
   )
 }
+
+export default FooterTitle

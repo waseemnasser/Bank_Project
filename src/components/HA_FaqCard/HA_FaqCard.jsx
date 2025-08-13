@@ -1,12 +1,18 @@
 import "./HA_FaqCard.css";
-const HA_FaqCard = ({ title, des }) => {
+import { HA_FaqCard_Data } from "./../../data/HA_FaqCard_Data";
+
+function HA_FaqCard() {
   return (
-    <div className="faqCard">
-      <h2 className="title LexendMedium">{title}</h2>
-      <div className="divider"></div>
-      <h3 className="des LexendLight">{des}</h3>
+    <div className="aa-faq-container-card">
+      {HA_FaqCard_Data.map((card) => (
+        <div className="faqCard">
+          <h2 className="title LexendMedium">{card.title}</h2>
+          <div className="divider"></div>
+          <h3 className="des LexendLight">{card.des}</h3>
+        </div>
+      ))}
     </div>
-  );
+  )
 };
 
 export default HA_FaqCard;
