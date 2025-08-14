@@ -8,6 +8,7 @@ import Security from './pages/Security';
 import About from './pages/About';
 import NavBar from "./components/navBar/NavBar"
 import Footer from './components/Footer/Footer';
+import "./App.css"
 
 
 function App() {
