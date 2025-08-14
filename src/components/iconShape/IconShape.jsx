@@ -1,6 +1,6 @@
 import "./iconShape.css";
 
-function IconShape(icon, size = 98, className = "") {
+function IconShape({icon, size = 98, className = ""}) {
     return (
         <div
             className={`ss-icon-container ${className}`}

@@ -1,10 +1,10 @@
 import "./SectionTitle.css"
 
-function SectionTitle ( titlewhite, titlegreen, filter, paragraph, order ) {
+function SectionTitle ( {titlewhite, titlegreen, filter, paragraph, order} ) {
   return (
     <div className="ST-backgroun">
       <div className="ST-container">
-        <div className={`ST - title ${filter ? "ss-width" : "ss-width100"}`}>
+        <div className={`ST-title ${filter ? "ss-width" : "ss-width100"}`}>
           <h1 className="LexendMedium">
             {order ?
               <>
