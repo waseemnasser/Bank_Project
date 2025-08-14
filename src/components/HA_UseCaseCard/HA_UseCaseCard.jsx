@@ -1,6 +1,6 @@
 import "./HA_UseCaseCard.css";
 
-function HA_UseCaseCard(image, alt, desc) {
+function HA_UseCaseCard({image, alt, desc}) {
   return (
     <div className="useCaseCard">
       <div className="shadow">
