@@ -27,4 +27,20 @@ export const HA_FaqCard_Data = [
     Additionally, we regularly update our security measures to stay ahead of emerging threats. 
     You can bank with confidence knowing that we have robust security systems in place.`,
   },
+  {
+    title: "How can I access my accounts online?",
+    des: `Accessing your accounts online is simple and secure. 
+    Visit our website and click on the "Login" button. Enter your username and password to access your accounts. 
+    If you haven't registered for online banking, click on the "Enroll Now" button and follow the registration process. 
+    If you need assistance, our customer support team is available to guide you.`,
+  },
+  {
+    title: "Are my transactions and personal information secure?",
+    des: `At YourBank, we prioritize the security of your transactions and personal information. 
+    We employ industry-leading encryption and multi-factor authentication to ensure that your data is protected. 
+    Additionally, we regularly update our security measures to stay ahead of emerging threats. 
+    You can bank with confidence knowing that we have robust security systems in place.`,
+  },
 ];
+const data = JSON.stringify(HA_FaqCard_Data)
+localStorage.setItem('faqData' , data)

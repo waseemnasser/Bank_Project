@@ -1,6 +1,6 @@
 import "./SectionTitle.css"
 
-function SectionTitle ( {titlewhite, titlegreen, filter, paragraph, order} ) {
+function SectionTitle ( {titlewhite, titlegreen, filter, paragraph, order }) {
   return (
     <div className="ST-backgroun">
       <div className="ST-container">
