@@ -1,0 +1,94 @@
+.OBC-container{
+    background-color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+    border-radius: 40px 14px;
+    border: 1px solid  rgba(202, 255, 51, 0.1);
+    /* border-image-source: linear-gradient(280.49deg, rgba(202, 255, 51, 0.1) 0%, rgba(38, 38, 38, 0) 17.02%, rgba(38, 38, 38, 0) 68.88%, rgba(38, 38, 38, 0.8) 100%); */
+    padding: 40px;
+    max-width: 38.9583vw;
+    .OB-card-title{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    .OBC-card{
+        padding-top: 0;
+    }
+    h3{
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 150%;
+        color: var(--text-color);
+        padding-bottom: 30px;
+        transform: translateY(25%);
+    }
+    }
+    p{
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 150%;
+        color: var(--paragraph-color);
+    }
+}
+.OBC-container::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 40px 14px;
+    opacity: 0.5;
+    background-image: url(/public/assets/images/careers/asfalt-careers.png);
+}
+.OBC-container::after{
+    content: "";
+    position: absolute;
+    width: 116px;
+    height: 116px;
+    background-color: rgb(201, 255, 51, 0.2);
+    border-radius: 50%;
+    filter: blur(80px);
+    top: 0;
+    left: 0;
+}
+
+@media screen and (max-width:1440px) {
+    .OBC-container{
+        max-width: 42.3611vw;
+        .OB-card-title{
+            display: flex;
+            gap: 20px;
+        h3{
+            font-size: 20px;
+            padding-bottom: 24px;
+        }
+        }
+    p{
+        font-size: 16px;
+    }
+}
+.OBC-container::after{
+    width: 100px;
+    height: 100px;
+}
+}
+@media screen and (max-width:992px) {
+    .OBC-container{
+        max-width: 91.7948vw;
+        padding: 24px;
+        .OB-card-title{
+            gap: 10px;
+        h3{
+            font-size: 18px;
+        }
+        }
+        p{
+            font-size: 14px;
+        }
+}
+.OBC-container::after{
+    width: 60px;
+    height: 60px;
+}
+}

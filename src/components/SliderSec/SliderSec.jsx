@@ -1,8 +1,11 @@
-import "./SliderSec.css"
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import "./SliderSec.css"
 import SliderIco from "/public/assets/images/Icons/slider-icons/slider-icon.svg"
+import { exportedOTSlideData } from "../../data/OurTestimonialsSliderData"
+import leftArrow from "/public/assets/images/Icons/slider-icons/left-arrow.svg";
+import rightArrow from "/public/assets/images/Icons/slider-icons/right-arrow.svg";
 
 function Arrow(props) {
   const { className, style, onClick } = props;
@@ -14,9 +17,6 @@ function Arrow(props) {
     />
   );
 }
-
-
-
 export const SliderSec = () => {
     var settings = {
     infinite: true,
@@ -24,8 +24,8 @@ export const SliderSec = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
-    nextArrow: <Arrow />,
-    prevArrow: <Arrow />,
+    nextArrow: <img src={rightArrow} alt="Previous" /> ,
+    prevArrow: <img src={leftArrow} alt="Previous" />,
     responsive: [
       {
         breakpoint: 1440,
@@ -49,51 +49,29 @@ export const SliderSec = () => {
         <div className="backgroundSLider">
             <div className="slider-container white-space">
             <Slider {...settings}>
-                <div className="card">
-                <img src={SliderIco} alt="SliderIco" />
-                <p>I recently started my own business, and YourBank has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.</p>
-                <h3>John</h3>
-                </div>
-                
-                <div className="card">
-                <img src={SliderIco} alt="SliderIco" />
-                <p>I recently started my own business, and YourBank has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.</p>
-                <h3>John</h3>
-                </div>
-                
-                <div className="card">
-                <img src={SliderIco} alt="SliderIco" />
-                <p>I recently started my own business, and YourBank has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.</p>
-                <h3>John</h3>
-                </div>
-                
-                <div className="card">
-                <img src={SliderIco} alt="SliderIco" />
-                <p>I recently started my own business, and YourBank has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.</p>
-                <h3>John</h3>
-                </div>
-                
-                <div className="card">
-                <img src={SliderIco} alt="SliderIco" />
-                <p>I recently started my own business, and YourBank has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.</p>
-                <h3>John</h3>
-                </div>
-                
-                <div className="card">
-                <img src={SliderIco} alt="SliderIco" />
-                <p>I recently started my own business, and YourBank has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.</p>
-                <h3>John</h3>
-                </div>
-                
-                <div className="card">
-                <img src={SliderIco} alt="SliderIco" />
-                <p>I recently started my own business, and YourBank has been instrumental in helping me set up my business accounts and secure the financing I needed. Their expert guidance and tailored solutions have been invaluable.</p>
-                <h3>John</h3>
-                </div>
-                
+              {exportedOTSlideData.map((e, index) => {
+                              return (
+                                  <div className="card" key={index}>
+                                    <img src={SliderIco} alt="SliderIco" />
+                                    <p className="LexendRegular">{e.paragraph}</p>
+                                    <h3 className="LexendMedium">{e.name}</h3>
+                                  </div>
+                              )
+                          })}
+               
             </Slider>
-            </div>            
+            </div>  
         </div>
 
   )
 }
+
+
+
+
+
+
+
+
+
+

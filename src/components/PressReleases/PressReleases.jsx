@@ -1,6 +1,6 @@
 import { pressData } from "../../data/pressData";
 import './PressReleases.css'
-import { SectionTitle } from "../SectionTitle/SectionTitle";
+import { SectionTitle } from "../SectionTitle/SectionTitle"
 import React, { useState, useEffect } from "react";
 
 function PressReleases() {
@@ -20,6 +20,7 @@ function PressReleases() {
     return (
         <section className="WN-press-releases">
             <SectionTitle
+                widthtitle={1296}
                 titlegreen="Press Releases"
                 paragraph="Stay updated with the latest happenings and exciting developments at YourBank through our press releases."
             />

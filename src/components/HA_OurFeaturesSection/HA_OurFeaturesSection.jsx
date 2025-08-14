@@ -1,5 +1,5 @@
 import Featured from "../Featured/Featured";
-import SectionTitle from "../SectionTitle/SectionTitle";
+import { SectionTitle } from "../SectionTitle/SectionTitle";
 
 
 const HA_OurFeaturesSection = () => {
@@ -10,7 +10,7 @@ const HA_OurFeaturesSection = () => {
         titlegreen=" Features"
         paragraph="Experience a host of powerful features at YourBank, including seamless online banking, secure transactions, and personalized financial insights, all designed to enhance your banking experience"
         filter={false}
-        order={false}
+        widthtitle={1296}
       />
       <Featured />
     </div>
