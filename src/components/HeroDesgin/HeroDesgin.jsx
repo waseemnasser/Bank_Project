@@ -1,5 +1,5 @@
 import './HeroDesgin.css'
-function HeroDesgin(title, description, imageBackground) {
+function HeroDesgin({title, description, imageBackground}) {
   return (
     <div className="rh-hero">
       <div className='rh-description'>

@@ -9,6 +9,7 @@ import About from './pages/About';
 import NavBar from "./components/navBar/NavBar"
 import Footer from './components/Footer/Footer';
 
+
 function App() {
   return (
     <div className="app">

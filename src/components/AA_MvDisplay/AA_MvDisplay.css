@@ -1,0 +1,8 @@
+.aa-mv-container{
+  background-color: var(--third-color);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
