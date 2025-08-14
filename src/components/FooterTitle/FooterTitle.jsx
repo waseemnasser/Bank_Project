@@ -1,7 +1,7 @@
 import "./FooterTitle.css"
 import  {Link}  from "react-router-dom"
 
-function FooterTitle ({title, paragraph}) {
+const FooterTitle = ({title, paragraph}) => {
   return (
     <div className="FT-background"> 
       <div className="FooterTitle white-space">
