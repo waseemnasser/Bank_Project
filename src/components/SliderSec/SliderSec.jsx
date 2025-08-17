@@ -2,10 +2,7 @@ import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import "./SliderSec.css"
-import SliderIco from "/public/assets/images/Icons/slider-icons/slider-icon.svg"
 import { exportedOTSlideData } from "../../data/OurTestimonialsSliderData"
-import leftArrow from "/public/assets/images/Icons/slider-icons/left-arrow.svg";
-import rightArrow from "/public/assets/images/Icons/slider-icons/right-arrow.svg";
 
 function Arrow(props) {
   const { className, style, onClick } = props;
@@ -24,8 +21,8 @@ export const SliderSec = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     initialSlide: 0,
-    nextArrow: <img src={rightArrow} alt="Previous" /> ,
-    prevArrow: <img src={leftArrow} alt="Previous" />,
+    nextArrow: <img src="assets/images/Icons/slider-icons/right-arrow.svg" alt="Previous" /> ,
+    prevArrow: <img src="assets/images/Icons/slider-icons/left-arrow.svg" alt="Previous" />,
     responsive: [
       {
         breakpoint: 1440,
@@ -52,7 +49,7 @@ export const SliderSec = () => {
               {exportedOTSlideData.map((e, index) => {
                               return (
                                   <div className="card" key={index}>
-                                    <img src={SliderIco} alt="SliderIco" />
+                                    <img src="assets/images/Icons/slider-icons/slider-icon.svg" alt="SliderIco" />
                                     <p className="LexendRegular">{e.paragraph}</p>
                                     <h3 className="LexendMedium">{e.name}</h3>
                                   </div>

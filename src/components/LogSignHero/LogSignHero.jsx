@@ -1,13 +1,10 @@
 import './LogSignHero.css'
 import {Link} from 'react-router-dom' 
-import facebookIcon from '/assets/images/Icons/footer-icons/facebook.svg'
-import googleIcon from '/assets/images/Icons/google-icon.svg'
-import AppleIcon from '/assets/images/Icons/Apple-icon.svg'
 import IconShape from '../iconShape/IconShape'
 const LogSignHero = ({ title , description , isSignUp}) => {
   return (
     <>
-     <div className="rh_containr ">
+     <div className="rh_containr section-MarginBottom">
       <img src="assets/images/logeIn-signUp/login-background.png" alt="background" className='rh-LS-background'/>
       <img src="assets/images/AbstractDesign/heroDesign.png" alt="heroDesign" className='rh-LS-background-TopRight'/>
       <div className="rh_titelPart">
@@ -45,14 +42,9 @@ const LogSignHero = ({ title , description , isSignUp}) => {
           <div className="rh_Line"></div>
         </div>
         <div className="rh_social">
-          
-            <IconShape icon ={googleIcon} className="logSignPageIcon" size={94}/>
-         
-           <IconShape icon ={facebookIcon} className="logSignPageIcon" size={94}/>
-          
-        
-            <IconShape icon ={AppleIcon} className="logSignPageIcon" size={94}/>
-          
+          <IconShape icon ={"assets/images/Icons/google-icon.svg"} className="logSignPageIcon" size={94}/>
+          <IconShape icon ={"assets/images/Icons/facebook.svg"} className="logSignPageIcon" size={94}/>
+          <IconShape icon ={"assets/images/Icons/Apple-icon.svg"} className="logSignPageIcon" size={94}/>
         </div>
       </div>
     </div>
