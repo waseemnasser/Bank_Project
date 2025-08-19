@@ -93,17 +93,17 @@
   }
 
   .rh-products-cards> :first-child {
-    padding: 0px;
     width: 100%;
+    padding: 0 0 30px;
   }
 
   .rh-products-cards> :nth-child(2) {
-    padding: 0;
+    padding: 0 0 30px;
     width: 100%;
   }
 
   .rh-products-cards> :nth-child(3) {
-    padding: 0;
+    padding: 0 0 30px;
     width: 100%;
   }
 

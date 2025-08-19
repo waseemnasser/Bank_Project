@@ -1,22 +1,48 @@
 .backgroundSLider {
+    position: relative;
     background-color: var(--third-color);
     background-image: none !important;
 }
 
-
-.slick-list {
-    margin-left: 37px !important;
-    margin-right: 37px !important;
+.slider-container {
     position: relative;
 }
 
-.slick-list .slick-track .slick-slide>div {
+.backgroundSLider .swiper {
+    margin-left: 37px !important;
+    margin-right: 37px !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.backgroundSLider .swiper::before,
+.backgroundSLider .swiper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    background: var(--third-color);
+    filter: blur(20px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.backgroundSLider .swiper::before {
+    left: 0;
+}
+
+.backgroundSLider .swiper::after {
+    right: 0;
+}
+
+.backgroundSLider .swiper-wrapper .swiper-slide {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
 }
 
-.slick-list .slick-track .slick-slide>div .card {
+.backgroundSLider .swiper-wrapper .swiper-slide .card {
     position: relative;
     display: flex !important;
     gap: 50px !important;
@@ -26,12 +52,12 @@
     max-width: 21.0416vw !important;
 }
 
-.slick-list .slick-track .slick-slide>div .card img {
+.backgroundSLider .swiper-wrapper .swiper-slide .card img {
     width: 60px;
     height: 60px;
 }
 
-.slick-list .slick-track .slick-slide>div .card p {
+.backgroundSLider .swiper-wrapper .swiper-slide .card p {
     color: var(--text-color);
     font-size: 18px;
     font-weight: 400;
@@ -39,15 +65,15 @@
     text-align: center;
 }
 
-.slick-list .slick-track .slick-slide>div .card h3 {
+.backgroundSLider .swiper-wrapper .swiper-slide .card h3 {
     color: var(--button-keyworld-color);
     font-size: 18px;
     font-weight: 500;
     line-height: 150%;
 }
 
-.slick-list .slick-track .slick-slide>div .card::before,
-.slick-list .slick-track .slick-slide>div .card::after {
+.backgroundSLider .swiper-wrapper .swiper-slide .card::before,
+.backgroundSLider .swiper-wrapper .swiper-slide .card::after {
     content: "";
     position: absolute;
     width: 7.9166vw;
@@ -56,154 +82,107 @@
     top: 9%;
 }
 
-.slick-list .slick-track .slick-slide>div .card::before {
+.backgroundSLider .swiper-wrapper .swiper-slide .card::before {
     right: 50%;
     transform: translateX(-50%);
 }
 
-.slick-list .slick-track .slick-slide>div .card::after {
+.backgroundSLider .swiper-wrapper .swiper-slide .card::after {
     left: 50%;
     transform: translateX(50%);
 }
 
-.slick-list::before,
-.slick-list::after {
-    content: "";
+.custom-prev,
+.custom-next {
     position: absolute;
-    width: 50vw;
-    height: 99%;
-    top: 0;
-    z-index: 1;
-    filter: blur(20px);
-}
-
-.slick-list::before {
-    left: -70px;
-    background-image: linear-gradient(to right, var(--third-color) 1%, transparent 100%);
-}
-
-.slick-list::after {
-    right: -70px;
-    background-image: linear-gradient(to left, var(--third-color) 1%, transparent 100%);
-}
-
-.slick-prev,
-.slick-next {
-    width: 62px !important;
-    height: 62px !important;
-    border: 1px solid var(--second-color) !important;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 62px;
+    height: 62px;
+    border: 1px solid var(--second-color);
     background-color: var(--primary-color);
     border-radius: 50%;
-    padding: 14px !important;
-    position: absolute;
+    padding: 14px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
-.slick-prev:before,
-.slick-next:before {
-    content: "" !important;
-}
-
-.slick-prev {
-    left: -50px;
+/* icons */
+.custom-prev {
+    left: -10px;
     background: var(--primary-color) url("assets/images/Icons/slider-icons/left-arrow.svg") no-repeat center;
     background-size: 50%;
 }
 
-.slick-next {
-    right: -50px;
+.custom-next {
+    right: -10px;
     background: var(--primary-color) url("assets/images/Icons/slider-icons/right-arrow.svg") no-repeat center;
     background-size: 50%;
 }
 
-.slick-prev:hover,
-.slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus {
-    background-color: var(--primary-color) !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: 50% !important;
-    border-color: var(--second-color) !important;
-    opacity: 1 !important;
+.custom-prev:hover,
+.custom-prev:focus,
+.custom-next:hover,
+.custom-next:focus {
+    background-color: var(--primary-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    border-color: var(--second-color);
+    opacity: 1;
 }
-
-.slick-prev:hover,
-.slick-prev:focus {
-    background-image: url("assets/images/Icons/slider-icons/left-arrow.svg") !important;
-}
-
-.slick-next:hover,
-.slick-next:focus {
-    background-image: url("assets/images/Icons/slider-icons/right-arrow.svg") !important;
-}
-
 
 @media screen and (max-width: 1440px) {
-    .slick-list {
+    .backgroundSLider .swiper {
         margin-left: 28px !important;
         margin-right: 28px !important;
     }
 
-    .slick-list .slick-track .slick-slide>div .card {
+    .backgroundSLider .swiper-wrapper .swiper-slide .card {
         gap: 40px !important;
         max-width: 22.5923vw !important;
     }
 
-    .slick-list .slick-track .slick-slide>div .card img {
+    .backgroundSLider .swiper-wrapper .swiper-slide .card img {
         width: 44px;
         height: 44px;
     }
 
-    .slick-list .slick-track .slick-slide>div .card p,
-    .slick-list .slick-track .slick-slide>div .card h3 {
+    .backgroundSLider .swiper-wrapper .swiper-slide .card p,
+    .backgroundSLider .swiper-wrapper .swiper-slide .card h3 {
         font-size: 16px;
     }
 
-    .slick-list .slick-track .slick-slide>div .card::before,
-    .slick-list .slick-track .slick-slide>div .card::after {
+    .backgroundSLider .swiper-wrapper .swiper-slide .card::before,
+    .backgroundSLider .swiper-wrapper .swiper-slide .card::after {
         top: 8%;
         width: 8.6576vw;
     }
 
-    .slick-list::before,
-    .slick-list::after {
-        width: 35vw;
+    .backgroundSLider .swiper::before,
+    .backgroundSLider .swiper::after {
+        width: 40px;
     }
 
-    .slick-list::before {
-        background-image: linear-gradient(to right, var(--third-color) 4%, transparent 180%);
-    }
 
-    .slick-list::after {
-        background-image: linear-gradient(to left, var(--third-color) 4%, transparent 180%);
-    }
-
-    .slick-prev {
-        left: -40px;
-    }
-
-    .slick-next {
-        right: -40px;
-    }
-
-    .slick-prev,
-    .slick-next {
-        width: 52px !important;
-        height: 52px !important;
-        padding: 12px !important;
+    .custom-prev,
+    .custom-next {
+        width: 52px;
+        height: 52px;
+        padding: 12px;
     }
 }
 
 @media screen and (max-width: 992px) {
-    .slick-list {
+    .backgroundSLider .swiper {
         margin-left: 16px !important;
         margin-right: 16px !important;
     }
 
-    .slick-list .slick-track .slick-slide>div .card {
+    .backgroundSLider .swiper-wrapper .swiper-slide .card {
         gap: 30px !important;
         max-width: 91.7948vw !important;
         padding: 20px !important;
@@ -211,52 +190,44 @@
         border-radius: 12px;
     }
 
-    .slick-list .slick-track .slick-slide>div .card img {
+    .backgroundSLider .swiper-wrapper .swiper-slide .card img {
         width: 44px;
         height: 44px;
     }
 
-    .slick-list .slick-track .slick-slide>div .card p {
+    .backgroundSLider .swiper-wrapper .swiper-slide .card p {
         font-size: 14px;
     }
 
-    .slick-list .slick-track .slick-slide>div .card::before {
+    .backgroundSLider .swiper-wrapper .swiper-slide .card::before {
         width: 31.0256vw;
         top: 17%;
         right: 40%;
     }
 
-    .slick-list .slick-track .slick-slide>div .card::after {
+    .backgroundSLider .swiper-wrapper .swiper-slide .card::after {
         width: 31.0256vw;
         top: 17%;
         left: 40%;
     }
 
-    .slick-list::before,
-    .slick-list::after {
-        width: 25vw;
+    .backgroundSLider .swiper::before,
+    .backgroundSLider .swiper::after {
+        width: 30px;
     }
 
-    .slick-list::before {
-        background-image: linear-gradient(to right, var(--third-color) -1%, transparent 130%);
+    .custom-prev,
+    .custom-next {
+        top: auto;
+        transform: none;
+        bottom: -60px;
     }
 
-    .slick-list::after {
-        background-image: linear-gradient(to left, var(--third-color) -1%, transparent 130%);
-    }
-
-    .slick-prev,
-    .slick-next {
-        top: 115% !important;
-        z-index: 1 !important;
-        bottom: -125px !important;
-    }
-
-    .slick-prev {
+    .custom-prev {
         left: 30% !important;
     }
 
-    .slick-next {
+    .custom-next {
         right: 30% !important;
     }
 }
