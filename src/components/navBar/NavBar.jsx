@@ -3,7 +3,7 @@ import "./navBar.css"
 import { NavLink } from 'react-router-dom'
 
 function NavBar() {
-    let list = ["Home", "Carrers", "About", "Security"]
+    let list = ["Home", "Careers", "About", "Security"]
     let LinkList = ["/", "/careers", "/about", "/security"]
     let buttonsList = ["Sign Up", "Login"]
     let buttonsLinksList = ["/signup", "/login"]
@@ -15,7 +15,7 @@ function NavBar() {
 
     return (
         <nav className='white-space'>
-            <img className='ss-navLogo' src="assets/images/Home/logo.png" alt="nav-logo" />
+            <a href=""><img className='ss-navLogo' src="assets/images/Home/logo.png" alt="nav-logo" /></a>
             <ul className='ss-navUl'>{list.map((listItem, index) => (<li key={index}><NavLink className={({ isActive }) => isActive ? "ss-link-active LexendRegular" : "LexendRegular"} to={`${LinkList[index]}`}>{listItem}</NavLink></li>))}</ul>
             <div className='ss-buttonsDiv'>
                 {buttonsList.map((button, index) => (

@@ -1,49 +1,54 @@
-.FT-background{
+.FT-background {
     background-color: var(--third-color);
 }
-.FooterTitle{
+
+.FooterTitle {
     max-width: 83.125vw;
-    /* border: 1px solid transparent;
-    border-image: linear-gradient(135deg, var(--button-keyworld-color) 10%, var(--second-color) 16%);
-    border-image-slice: 1; */
     border-radius: 20px;
     height: 288px;
     background-color: var(--third-color);
-    border: 1px solid var(--card-title-color );
+    background-image: url("/assets/images/AbstractDesign/asfalt-light.png");
+    background-position: top;
+    border: 1px solid var(--card-title-color);
     padding: 80px;
     display: flex;
-    gap: 150px; 
+    gap: 150px;
     align-items: center;
     justify-content: space-between;
     color: var(--text-color);
     position: relative;
-    img{
-            width: 298px;
-            height: 283px;
-            position: absolute;
-            left: 0;
-            top: 0;
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
-        }
-    .title{
-        h3{
+
+    img {
+        width: 298px;
+        height: 283px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .title {
+        h3 {
             font-weight: 400;
             font-size: 40px;
             margin-bottom: 14px;
-            line-height: 150%;  
-            span{
-            color: var(--button-keyworld-color);
-          }
+            line-height: 150%;
+
+            span {
+                color: var(--button-keyworld-color);
+            }
         }
-        p{
+
+        p {
             font-weight: 300;
             color: var(--paragraph-color);
-            line-height: 150%; 
-            font-size: 18px; 
+            line-height: 150%;
+            font-size: 18px;
         }
     }
-    .linkFooterTitle{
+
+    .linkFooterTitle {
         text-decoration: none;
         background-color: var(--button-keyworld-color);
         padding: 18px 30px;
@@ -54,7 +59,8 @@
         justify-content: center;
         align-items: center;
         border: none;
-        p{
+
+        p {
             color: var(--primary-color);
             font-size: 18px;
             line-height: 150%;
@@ -62,67 +68,78 @@
         }
     }
 }
-@media screen and (max-width:1440px){
-    .FooterTitle{
+
+@media screen and (max-width:1440px) {
+    .FooterTitle {
         max-width: 88.8888vw;
         height: 223px;
         padding: 60px;
-        img{
+
+        img {
             width: 202px;
             height: 192px;
         }
-        .title{
-            h3{
+
+        .title {
+            h3 {
                 font-size: 30px;
                 margin-bottom: 10px;
             }
-            p{
-                font-size: 16px; 
+
+            p {
+                font-size: 16px;
             }
         }
-        button{
+
+        button {
             padding: 14px 20px;
             max-width: 136px;
             height: 49px;
             color: var(--primary-color);
-                
-            p{
+
+            p {
                 font-size: 14px;
                 width: 96px;
             }
         }
     }
 }
-@media screen and (max-width:992px){
-    .FooterTitle{
+
+@media screen and (max-width:992px) {
+    .FooterTitle {
         margin: 0 auto;
         max-width: 91.7948vw;
-        height: 360px;
+        height: fit-content;
         padding: 30px;
         display: flex;
         flex-direction: column;
-        gap: 24px; 
+        gap: 24px;
         align-items: center;
         justify-content: center;
         text-align: center;
-        img{
+
+        img {
             width: 151px;
             height: 143px;
         }
-        .title{
-            h3{
+
+        .title {
+            h3 {
                 font-size: 24px;
                 margin-bottom: 14px;
             }
-            p{
-                font-size: 14px; 
+
+            p {
+                font-size: 14px;
             }
         }
-        button{
+
+        button {
             padding: 14px 24px;
             max-width: 144px;
             height: 49px;
-            p{
+
+            p {
                 font-size: 14px;
                 width: 96px;
             }

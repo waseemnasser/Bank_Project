@@ -3,7 +3,7 @@ import "./HA_JobOpeningsCard.css";
 
 const HA_JobOpeningsCard = () => {
   return (
-    <div className="HA_JobOpeningsCardWrapper white-space">
+    <div className="HA_JobOpeningsCardWrapper ">
       {HA_JobOpeningsCard_Data.map((card, cardIndex) => (
         <div key={cardIndex} className="HA_JobOpeningsCard">
           <h2 className="head LexendSemiBold">{card.head}</h2>
@@ -41,7 +41,7 @@ const HA_JobOpeningsCard = () => {
             ))}
           </div>
 
-          <button className="btn LexendMedium">Apply Now</button>
+          <button className={`btn LexendMedium ${cardIndex==1? 'aa-btn-mt': ''}`}>Apply Now</button>
         </div>
       ))}
     </div>

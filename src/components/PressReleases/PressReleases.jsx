@@ -18,7 +18,7 @@ function PressReleases() {
     }, [])
 
     return (
-        <section className="WN-press-releases">
+        <section className="WN-press-releases white-space section-MarginBottom">
             <SectionTitle
                 widthtitle={1296}
                 titlegreen="Press Releases"

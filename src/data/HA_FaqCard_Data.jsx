@@ -1,5 +1,6 @@
 export const HA_FaqCard_Data = [
   {
+    id: 1,
     title: "How do I open an account with YourBank?",
     des: `Opening an account with YourBank is easy.
       Simply visit our website and click on the "Open an Account" button. 
@@ -7,6 +8,7 @@ export const HA_FaqCard_Data = [
       If you have any questions or need assistance, our customer support team is available to help.`,
   },
   {
+    id: 2,
     title: "What documents do I need to provide to apply for a loan?",
     des: `The documents required for a loan application may vary depending on the type of loan you are applying for. 
     Generally, you will need to provide identification documents (such as a passport or driver's license), 
@@ -14,6 +16,7 @@ export const HA_FaqCard_Data = [
     Our loan officers will guide you through the specific requirements during the application process.`,
   },
   {
+    id: 3,
     title: "How can I access my accounts online?",
     des: `Accessing your accounts online is simple and secure. 
     Visit our website and click on the "Login" button. Enter your username and password to access your accounts. 
@@ -21,6 +24,7 @@ export const HA_FaqCard_Data = [
     If you need assistance, our customer support team is available to guide you.`,
   },
   {
+    id: 4,
     title: "Are my transactions and personal information secure?",
     des: `At YourBank, we prioritize the security of your transactions and personal information. 
     We employ industry-leading encryption and multi-factor authentication to ensure that your data is protected. 
@@ -28,6 +32,7 @@ export const HA_FaqCard_Data = [
     You can bank with confidence knowing that we have robust security systems in place.`,
   },
   {
+    id: 5,
     title: "How can I access my accounts online?",
     des: `Accessing your accounts online is simple and secure. 
     Visit our website and click on the "Login" button. Enter your username and password to access your accounts. 
@@ -35,6 +40,7 @@ export const HA_FaqCard_Data = [
     If you need assistance, our customer support team is available to guide you.`,
   },
   {
+    id: 6,
     title: "Are my transactions and personal information secure?",
     des: `At YourBank, we prioritize the security of your transactions and personal information. 
     We employ industry-leading encryption and multi-factor authentication to ensure that your data is protected. 
@@ -43,4 +49,4 @@ export const HA_FaqCard_Data = [
   },
 ];
 const data = JSON.stringify(HA_FaqCard_Data)
-localStorage.setItem('faqData' , data)
+localStorage.setItem('faqData', data)

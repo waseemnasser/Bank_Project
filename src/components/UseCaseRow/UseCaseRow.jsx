@@ -1,13 +1,13 @@
-import "./useCasesRow.css"
-import HA_UseCaseCard from "../HA_UseCaseCard/HA_UseCaseCard"
+import "./UseCaseRow.css"
+import UseCaseCard from "../UseCaseCard/UseCaseCard"
 
-const UseCasesRow = ({arr , indiv ,title , para , reverce}) => {
+const UseCasesRow = ({useCaseData , indiv ,title , para , reverce}) => {
     
   return (
     <div className= {`ss-useCases ${reverce ? "ss-reverce" : ""}`}>
-      <div className="ss-useCasesCards">
-        {arr.map((item,index) => (
-            <HA_UseCaseCard key={index} image={item.icon} alt={item.imgAlt} desc={item.title}/>
+      <div className="WN_UseCaseCards">
+        {useCaseData.map((item,index) => (
+            <UseCaseCard key={index} CardIcon={item.icon} CardDescription={item.description}/>
         ))}
       </div>
       <div className="ss-useCasesIndivs">

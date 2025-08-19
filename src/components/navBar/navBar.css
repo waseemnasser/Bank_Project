@@ -3,12 +3,16 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 34px !important;
+    padding: 0 34px !important;
+    height: 95px;
     border-radius: 100px;
-    position: relative;
+    position: fixed;
+    width: calc(100vw - 8.4375vw - 8.4375vw);
+    z-index: 5;
 
     .ss-navLogo {
         width: 155.83px;
+        cursor: pointer;
     }
 
     .ss-navUl {
@@ -98,7 +102,8 @@ nav {
 
 @media screen and (max-width: 1440px) {
     nav {
-        padding: 21.5px 24px !important;
+        padding: 0 24px !important;
+        width: calc(100vw - 5.5555vw - 5.5555vw);
 
         .ss-navLogo {
             width: 116.86px;
@@ -121,6 +126,9 @@ nav {
 
 @media screen and (max-width:992px) {
     nav {
+        width: calc(100vw - 3.0769vw - 3.0769vw);
+        padding: 0 14px;
+
         .ss-navLogo {
             width: 101.29px;
         }

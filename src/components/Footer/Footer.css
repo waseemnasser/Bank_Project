@@ -16,7 +16,8 @@ footer {
   align-items: center;
   max-width: 83%;
   margin: 0 auto;
-  padding: 100px 0;
+  padding-top: 100px;
+  padding-bottom : 50px;
   row-gap: clamp(24px, 4vw, 50px);
 }
 
@@ -103,6 +104,11 @@ img {
 
 
 @media screen and (max-width:1440px) {
+
+  .aa-footer {
+    padding-top : 60px;
+    padding-bottom : 30px;
+  }
   .Terms-of-Service {
     width: 88.888vw;
   }
@@ -115,10 +121,12 @@ img {
     justify-content: center;
   }
 
-
 }
 
 @media screen and (max-width: 992px) {
+  .aa-footer {
+    padding: 30px 0;
+  }
   .Terms-of-Service {
     flex-direction: column;
     align-items: center;
@@ -136,12 +144,15 @@ img {
 
   .aa-footer-social-ul {
     position: absolute;
-    top: -26px;
+    top: -43px;
   }
 
   .aa-footer-description {
     font-size: 14px;
     text-align: center;
     margin: 20px auto
+  }
+  .aa-border-bottom {
+    margin: 30px 0;
   }
 }
