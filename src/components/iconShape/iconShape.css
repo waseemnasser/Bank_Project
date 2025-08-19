@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 40px;
     --icon-scale: 1;
 
     .ss-big-circle {

@@ -1,21 +1,28 @@
 import "./SectionTitle.css"
 
-export const SectionTitle = ({titlewhite, titlegreen, filter, paragraph, reverse, widthtitle=910}) => {
+export const SectionTitle = ({ titlewhite, titlegreen, filter, paragraph, reverse, widthtitle = 910, handleUserTypeChange, userType }) => {
   return (
     <div className="ST-backgroun">
-        <div className="ST-container white-space">
-            <div className="ST-title" style={{ maxWidth: `calc((${widthtitle}*100vw/ 1920))`}}>
-                <h1 className=".LexendMedium">
-                  <span className={reverse? "whitetitle greenRevers":"whitetitle"}>{titlewhite}</span>
-                  <span className={reverse? "greentitle whiteRevers":"greentitle"}>{titlegreen}</span>
-                </h1>
-                <p className="LexendLight">{paragraph}</p>
-            </div>
-            <div className={filter?"filter-IB":"hidden"}>
-                <button className={filter?"LexendRegular filter-active":"hidden"}>For Individuals</button>
-                <button className={filter?"LexendRegular":"hidden"}>For Businesses</button>
-            </div>
+      <div className="ST-container">
+        <div className="ST-title" style={{ maxWidth: `calc((${widthtitle}*100vw/ 1920))` }}>
+          <h1 className="LexendMedium">
+            <span className={reverse ? "whitetitle greenRevers" : "whitetitle"}>{titlewhite}</span>
+            <span className={reverse ? "greentitle whiteRevers" : "greentitle"}>{titlegreen}</span>
+          </h1>
+          <p className="LexendLight">{paragraph}</p>
         </div>
+        <div className={filter ? "filter-IB" : "hidden"}>
+          <button
+            onClick={() => handleUserTypeChange('Individuals')}
+            className={`LexendRegular ${userType === 'Individuals' ? 'filter-active' : ''}`} >For Individuals
+          </button>
+          <button
+            onClick={() => handleUserTypeChange('Businesses')}
+            className={`LexendRegular ${userType === 'Businesses' ? 'filter-active' : ''}`} >For Businesses </button>
+        </div>
+      </div>
     </div>
   )
 }
+
+

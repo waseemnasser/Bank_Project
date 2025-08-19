@@ -5,7 +5,7 @@ import { useState } from "react";
 function Featured() {
     const [group,setGroup]=useState(0);
   return (
-    <div className='aa-features-container '>
+    <div className='aa-features-container section-MarginBottom'>
       <FeaturesFilter setGroup={setGroup}/>
       <FeaturesCard  group={group}/>
     </div>

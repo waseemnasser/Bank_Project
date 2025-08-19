@@ -1,7 +1,20 @@
 .app {
     background-color: var(--third-color);
-    padding-top: 30px;
-    background-image: url("/assets/images/AbstractDesign/heroAbstract");
+    padding-top: 50px;
+    background-image: url("/assets/images/AbstractDesign/heroAbstract.png");
     background-repeat: no-repeat;
     background-position: top left;
+}
+
+@media screen and (max-width:1440px) {
+    .app {
+        padding-top: 30px;
+    }
+    
+}
+@media screen and (max-width:992px) {
+    .app {
+        padding-top: 40px;
+    }
+    
 }

@@ -1,51 +1,52 @@
 .WNprotectYou {
     /* width: 82.97vw; */
-    background-image: url(../../../public/assets/images/AbstractDesign/asfalt-light.png);
-    background-color: var(--primary-color);
-    background-size: cover;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
 
-    .WNprotectCards {
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        flex-wrap: wrap;
-        transform: translateY(20%);
-        gap: 30px;
+    .protectYouCardsContainer {
+        background-image: url(/assets/images/AbstractDesign/asfalt-light.png);
+        background-color: var(--primary-color);
+        background-size: cover;
+        border-radius: 50px 50px 20px 20px;
+        height: 630px;
 
-        .WNprotectCard {
-            width: 43.19%;
-            height: 330px;
-            border-radius: 20px;
-            border: 1px solid #262626;
-            padding: 50px;
-            background-image: url(/assets/images/AbstractDesign/asfalt-light.png);
-            background-color: var(--primary-color);
-            background-position: left;
+        .WNprotectCards {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            transform: translateY(82px);
+            gap: 30px;
 
-            .protectFlex {
-                display: flex;
-                align-items: center;
+            .WNprotectCard {
+                width: 43.19%;
+                height: 330px;
+                border-radius: 20px;
+                border: 1px solid #262626;
+                padding: 50px;
+                background-image: url(/assets/images/AbstractDesign/asfalt-light.png);
+                background-color: var(--primary-color);
+                background-position: left;
 
-                .protectIcon {
-                    display: block !important;
-                    padding-top: 0 !important;
+                .protectFlex {
+                    display: flex;
+                    align-items: center;
+
+                    .protectIcon {
+                        display: block !important;
+                    }
                 }
-            }
 
-            .protectYouCardTitle {
-                color: var(--text-color);
-                font-size: 24px;
-                margin-left: 20px;
-            }
+                .protectYouCardTitle {
+                    color: var(--text-color);
+                    font-size: 24px;
+                    margin-left: 20px;
+                }
 
-            .protectYouCardDesc {
-                font-size: 18px;
-                color: var(--paragraph-color);
-                margin-top: 24px;
+                .protectYouCardDesc {
+                    font-size: 18px;
+                    color: var(--paragraph-color);
+                    margin-top: 24px;
+                }
             }
         }
     }
@@ -53,22 +54,27 @@
 
 @media screen and (max-width:1440px) {
     .WNprotectYou {
-        .WNprotectCards {
-            gap: 20px;
+        .protectYouCardsContainer {
+            height: 549px;
 
-            .WNprotectCard {
-                width: 38.19vw;
-                padding: 40px;
-                height: 296px;
+            .WNprotectCards {
+                gap: 20px;
+                transform: translateY(62px);
 
-                .protectYouCardTitle {
-                    font-size: 20px;
-                    margin-left: 14px;
-                }
+                .WNprotectCard {
+                    width: 38.19vw;
+                    padding: 40px;
+                    height: 296px;
 
-                .protectYouCardDesc {
-                    font-size: 16px;
-                    margin-top: 20px;
+                    .protectYouCardTitle {
+                        font-size: 20px;
+                        margin-left: 14px;
+                    }
+
+                    .protectYouCardDesc {
+                        font-size: 16px;
+                        margin-top: 20px;
+                    }
                 }
             }
         }
@@ -77,25 +83,28 @@
 
 @media screen and (max-width:992px) {
     .WNprotectYou {
-        background: none;
+        .protectYouCardsContainer {
+            background: none;
+            height: fit-content;
 
-        .WNprotectCards {
-            flex-direction: column;
-            align-items: center;
-            transform: translate(0);
+            .WNprotectCards {
+                flex-direction: column;
+                align-items: center;
+                transform: none !important;
 
-            .WNprotectCard {
-                width: 100%;
-                padding: 24px;
-                height: 260px;
+                .WNprotectCard {
+                    width: 100%;
+                    padding: 24px;
+                    height: 260px;
 
-                .protectYouCardTitle {
-                    font-size: 18px;
-                }
+                    .protectYouCardTitle {
+                        font-size: 18px;
+                    }
 
-                .protectYouCardDesc {
-                    font-size: 14px;
-                    margin-top: 18px;
+                    .protectYouCardDesc {
+                        font-size: 14px;
+                        margin-top: 18px;
+                    }
                 }
             }
         }

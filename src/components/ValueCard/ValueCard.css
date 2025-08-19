@@ -1,13 +1,14 @@
 .rh-value-Container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
     gap: 80px;
     justify-content: center;
-    background-color: var(--tenth-color);
 
     .rh-h3 {
         font-size: 58px;
         color: var(--card-title-color);
+        white-space: nowrap;
+        padding-bottom: 30px;
     }
 
     .rh-p {
@@ -28,6 +29,7 @@
 
         .rh-h3 {
             font-size: 40px;
+            padding-bottom: 20px;
         }
 
         .rh-p {
@@ -44,11 +46,12 @@
 
 @media screen and (max-width:992px) {
     .rh-value-Container {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 50px;
 
         .rh-h3 {
             font-size: 30px;
+            padding-bottom: 14px;
         }
 
         .rh-p {

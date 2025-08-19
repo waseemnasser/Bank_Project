@@ -1,11 +1,10 @@
 .WN-press-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 
     .WN-press-card {
-        width: 40.78vw;
+        width: 39.75vw;
         background-color: var(--primary-color);
         padding: 30px;
         border-radius: 10px;
@@ -106,8 +105,9 @@
 
 @media screen and (max-width : 992px) {
     .WN-press-cards {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         align-items: center;
+        justify-items: center;
 
         .WN-press-card {
             width: 91.79vw !important;

@@ -17,6 +17,7 @@
   --tenth-color: #191919;
   --card-title-color: #4C4C4D;
   --input-color: #59595A;
+  --login-paragraph: #bfbfbf;
 }
 
 /*  Inter Fonts */
@@ -84,19 +85,67 @@
   font-family: LexendSemiBold;
 }
 
-.white-space{
+.section-MarginBottom {
+  margin-bottom: 150px !important;
+}
+
+.ProtectYou-MarginBottom {
+  margin-bottom: 232px !important;
+}
+
+.hero-mt,
+.homeHero-mt {
+  margin-top: 148px !important;
+}
+
+
+.white-space {
   margin-left: 8.4375vw;
   margin-right: 8.4375vw;
 }
-@media screen and (max-width:1440px){
-  .white-space{
+
+@media screen and (max-width:1440px) {
+  .white-space {
     margin-left: 5.5555vw;
     margin-right: 5.5555vw;
   }
+
+  .section-MarginBottom {
+    margin-bottom: 120px !important;
+  }
+
+  .ProtectYou-MarginBottom {
+    margin-bottom: 182px !important;
+  }
+
+  .hero-mt {
+    margin-top: 123px !important;
+  }
+
+  .homeHero-mt {
+    margin-top: 103px !important;
+  }
 }
-@media screen and (max-width:992px){
-  .white-space{
+
+@media screen and (max-width:992px) {
+  .white-space {
     margin-left: 3.0769vw;
     margin-right: 3.0769vw;
+  }
+
+  .section-MarginBottom {
+    margin-bottom: 80px !important;
+  }
+
+  .ProtectYou-MarginBottom {
+    margin-bottom: 80px !important;
+  }
+
+  .homeHero-mt {
+    margin-top: 150px !important;
+  }
+
+  .hero-mt {
+    margin-top: 98px !important;
   }
 }

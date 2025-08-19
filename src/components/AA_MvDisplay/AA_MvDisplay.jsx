@@ -1,8 +1,12 @@
 import AA_MissionVision from "../AA_MissionVision/AA_MissionVision"
+import { SectionTitle } from "../SectionTitle/SectionTitle"
+
 import "./AA_MvDisplay.css"
 export default function AA_MvDisplay() {
   return (
-    <div className="aa-mv-container">
+  
+    <section className="aa-mv-container white-space section-MarginBottom">
+      <SectionTitle filter={false} widthtitle={1296} titlegreen="Mission & vision" paragraph={"We envision being a leading force in the industry, driven by innovation, integrity, and inclusivity, creating a brighter financial future for individuals and businesses while maintaining a strong commitment to customer satisfaction and community development"} />
       <AA_MissionVision AaimageSrc="assets/images/About/mission-and-vision/mission-image.png" Aaborder="aa-right" Aareverse={false}
         MvTitle="Mission" Mvdes="At YourBank, our mission is to empower 
         our customers to achieve financial success. We are dedicated to 
@@ -17,6 +21,6 @@ export default function AA_MvDisplay() {
         the forefront of the industry, setting new standards for customer-centric banking.
         Our vision is to be the preferred financial institution, known for our unwavering
         commitment to excellence, trust, and customer satisfaction." />
-    </div>
+    </section>
   )
 }
