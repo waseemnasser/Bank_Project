@@ -85,6 +85,14 @@
   font-family: LexendSemiBold;
 }
 
+.section-MarginBottom{
+  margin-bottom: 150px !important;
+}
+.hero-mt , .homeHero-mt{
+  margin-top: 198px !important;
+}
+
+
 .section-MarginBottom {
   margin-bottom: 150px !important;
 }
