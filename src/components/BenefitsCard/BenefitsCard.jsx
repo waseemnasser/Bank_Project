@@ -8,7 +8,6 @@ export const BenefitsCard = ({ borderClassName,sizeIco, srcIco, classNameIco, ti
             <h3 className="LexendRegular">{title}</h3>
         </div>
         <p className="LexendLight">{paragraph}</p>
-
     </div>
   )
 }

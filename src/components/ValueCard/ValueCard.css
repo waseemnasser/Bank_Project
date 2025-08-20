@@ -17,7 +17,7 @@
     }
 
     .rh-ValueCard {
-        width: 39.479vw;
+        /* width: 39.479vw; */
         border-left: 1px solid var(--button-keyworld-color);
         padding-left: 30px;
     }
@@ -37,7 +37,7 @@
         }
 
         .rh-ValueCard {
-            width: 42.36vw;
+            /* width: 42.36vw; */
             padding-left: 24px;
         }
     }

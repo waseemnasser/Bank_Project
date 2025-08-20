@@ -2,7 +2,7 @@ import "./SectionTitle.css"
 
 export const SectionTitle = ({ titlewhite, titlegreen, filter, paragraph, reverse, widthtitle = 910, handleUserTypeChange, userType }) => {
   return (
-    <div className="ST-backgroun">
+    <div className="ST-background">
       <div className="ST-container">
         <div className="ST-title" style={{ maxWidth: `calc((${widthtitle}*100vw/ 1920))` }}>
           <h1 className="LexendMedium">

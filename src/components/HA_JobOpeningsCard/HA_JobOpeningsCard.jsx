@@ -1,50 +1,100 @@
 import { HA_JobOpeningsCard_Data } from "../../data/HA_JobOpeningsCard_Data";
 import "./HA_JobOpeningsCard.css";
+import { motion, useReducedMotion } from "framer-motion";
+
+const ease = [0.22, 1, 0.36, 1];
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.08, delayChildren: 0.05 },
+  },
+};
+
+const card = {
+  hidden: { opacity: 0, y: 16, scale: 0.985 },
+  show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.45, ease } },
+};
+
+const rowItem = {
+  hidden: { opacity: 0, y: 8 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.28, ease } },
+};
 
 const HA_JobOpeningsCard = () => {
+  const prefersReduced = useReducedMotion();
+
   return (
-    <div className="HA_JobOpeningsCardWrapper ">
-      {HA_JobOpeningsCard_Data.map((card, cardIndex) => (
-        <div key={cardIndex} className="HA_JobOpeningsCard">
-          <h2 className="head LexendSemiBold">{card.head}</h2>
+    <motion.div
+      className="HA_JobOpeningsCardWrapper gpu"
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+    >
+      {HA_JobOpeningsCard_Data.map((cardData, cardIndex) => (
+        <motion.div
+          key={cardIndex}
+          className="HA_JobOpeningsCard"
+          variants={card}
+          whileHover={prefersReduced ? {} : { y: -3 }}
+          transition={{ duration: 0.2 }}
+        >
+          <motion.h2 className="head LexendSemiBold" variants={rowItem}>
+            {cardData.head}
+          </motion.h2>
 
-          <div className="optionsContainer">
-            {card.options?.map((option, index) => (
-              <button key={index} className="HeadBtn LexendLight">
+          {/* Option chips */}
+          <motion.div className="optionsContainer" variants={rowItem}>
+            {cardData.options?.map((option, idx) => (
+              <motion.button
+                key={idx}
+                className="HeadBtn LexendLight"
+                whileHover={prefersReduced ? {} : { y: -2 }}
+                whileTap={prefersReduced ? {} : { scale: 0.98 }}
+                transition={{ duration: 0.15 }}
+              >
                 {option}
-              </button>
+              </motion.button>
             ))}
-          </div>
+          </motion.div>
 
-          <h3 className="titleANDrequirementTitle LexendSemiBold">
+          <motion.h3 className="titleANDrequirementTitle LexendSemiBold" variants={rowItem}>
             About This Job
-          </h3>
-          <span className="subTitleANDrequirements LexendLight">
-            {card.subTitle}
-          </span>
+          </motion.h3>
+          <motion.span className="subTitleANDrequirements LexendLight" variants={rowItem}>
+            {cardData.subTitle}
+          </motion.span>
 
-          <h3 className="titleANDrequirementTitle LexendSemiBold">
+          <motion.h3 className="titleANDrequirementTitle LexendSemiBold" variants={rowItem}>
             Requirements & Qualifications
-          </h3>
-          <div className="requirementsList">
-            {card.requirements?.map((req, index) => (
-              <div key={index} className="requirementItem">
+          </motion.h3>
+
+          <motion.div className="requirementsList" variants={rowItem}>
+            {cardData.requirements?.map((req, idx) => (
+              <motion.div key={idx} className="requirementItem" variants={rowItem}>
                 <img
                   className="img"
                   src="assets/images/Icons/careers-icons/briefcase-gray.svg"
                   alt="briefcase icon"
                 />
-                <span className="subTitleANDrequirements LexendLight">
-                  {req}
-                </span>
-              </div>
+                <span className="subTitleANDrequirements LexendLight">{req}</span>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
-          <button className={`btn LexendMedium ${cardIndex==1? 'aa-btn-mt': ''}`}>Apply Now</button>
-        </div>
+          <motion.button
+            className={`btn LexendMedium ${cardIndex === 1 ? "aa-btn-mt" : ""}`}
+            whileHover={prefersReduced ? {} : { y: -2 }}
+            whileTap={prefersReduced ? {} : { scale: 0.98 }}
+            transition={{ duration: 0.15 }}
+          >
+            Apply Now
+          </motion.button>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

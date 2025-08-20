@@ -109,7 +109,7 @@
         font-size: 14px;
         margin-top: 40px;
         width: 115px;
-        padding: 12px 20px ;
+        padding: 12px 20px;
       }
 
       .aa-btn-mt {
@@ -148,7 +148,7 @@
 
     .HA_JobOpeningsCard {
       padding: 5.55vh 5vw;
-      max-width: 80vw;
+      width: 100%;
 
       .head {
         font-size: 20px;

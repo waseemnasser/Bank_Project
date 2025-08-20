@@ -3,7 +3,7 @@
 }
 
 .FooterTitle {
-    max-width: 83.125vw;
+    width: 100%;
     border-radius: 20px;
     height: 288px;
     background-color: var(--third-color);
@@ -12,7 +12,6 @@
     border: 1px solid var(--card-title-color);
     padding: 80px;
     display: flex;
-    gap: 150px;
     align-items: center;
     justify-content: space-between;
     color: var(--text-color);
@@ -28,8 +27,9 @@
         border-bottom-left-radius: 20px;
     }
 
-    .title {
-        h3 {
+    .FT-text-container {
+        max-width: 1103px;
+        .FT-title {
             font-weight: 400;
             font-size: 40px;
             margin-bottom: 14px;
@@ -40,7 +40,7 @@
             }
         }
 
-        p {
+        .FT-des {
             font-weight: 300;
             color: var(--paragraph-color);
             line-height: 150%;
@@ -71,7 +71,6 @@
 
 @media screen and (max-width:1440px) {
     .FooterTitle {
-        max-width: 88.8888vw;
         height: 223px;
         padding: 60px;
 
@@ -80,13 +79,13 @@
             height: 192px;
         }
 
-        .title {
-            h3 {
+        .FT-text-container {
+            .FT-title {
                 font-size: 30px;
                 margin-bottom: 10px;
             }
 
-            p {
+            .FT-des {
                 font-size: 16px;
             }
         }
@@ -113,7 +112,6 @@
         padding: 30px;
         display: flex;
         flex-direction: column;
-        gap: 24px;
         align-items: center;
         justify-content: center;
         text-align: center;
@@ -123,13 +121,13 @@
             height: 143px;
         }
 
-        .title {
+        .FT-title {
             h3 {
                 font-size: 24px;
                 margin-bottom: 14px;
             }
 
-            p {
+            .FT-des {
                 font-size: 14px;
             }
         }
