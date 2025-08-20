@@ -53,7 +53,6 @@ export default function Dashboard() {
         setEditingTitleId(faq.id);
         setEditTitleValue(faq.title);
     };
-    // submit edit title
     const submitEditTitle = (e, id) => {
         e.preventDefault();
         setFaqArr((prev) =>
@@ -67,7 +66,6 @@ export default function Dashboard() {
         setEditingDesId(faq.id);
         setEditDesValue(faq.des);
     };
-    // submit edit description
     const submitEditDes = (e, id) => {
         e.preventDefault();
         setFaqArr((prev) =>
@@ -84,7 +82,12 @@ export default function Dashboard() {
     const row = {
         hidden: { opacity: 0, y: 10, scale: 0.995 },
         show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.28, ease } },
-        exit: { opacity: 0, y: -8, scale: 0.995, transition: { duration: 0.2, ease } },
+        exit: {
+            opacity: 0,
+            y: -8,
+            scale: 0.995,
+            transition: { duration: 0.2, ease },
+        },
     };
 
     return (
@@ -163,7 +166,10 @@ export default function Dashboard() {
                                     {/* Title cell */}
                                     <td className="LexendRegular ss-title">
                                         {editingTitleId === faq.id ? (
-                                            <form onSubmit={(e) => submitEditTitle(e, faq.id)} className="inline-form">
+                                            <form
+                                                onSubmit={(e) => submitEditTitle(e, faq.id)}
+                                                className="inline-form"
+                                            >
                                                 <input
                                                     type="text"
                                                     value={editTitleValue}
@@ -195,7 +201,10 @@ export default function Dashboard() {
                                     {/* Description cell */}
                                     <td className="LexendRegular ss-des">
                                         {editingDesId === faq.id ? (
-                                            <form onSubmit={(e) => submitEditDes(e, faq.id)} className="inline-form">
+                                            <form
+                                                onSubmit={(e) => submitEditDes(e, faq.id)}
+                                                className="inline-form"
+                                            >
                                                 <input
                                                     type="text"
                                                     value={editDesValue}
@@ -226,31 +235,26 @@ export default function Dashboard() {
 
                                     {/* Actions */}
                                     <td className="btns">
-                                        <div>
-                                            {editingTitleId === faq.id ? null : (
-                                                <motion.button
-                                                    className="LexendRegular btn"
-                                                    onClick={() => startEditTitle(faq)}
-                                                    whileHover={{ y: -1 }}
-                                                    whileTap={{ scale: 0.98 }}
-                                                >
-                                                    Edit title
-                                                </motion.button>
-                                            )}
-                                        </div>
-                                        <div>
-                                            {editingDesId === faq.id ? null : (
-                                                <motion.button
-                                                    className="LexendRegular btn"
-                                                    onClick={() => startEditDes(faq)}
-                                                    whileHover={{ y: -1 }}
-                                                    whileTap={{ scale: 0.98 }}
-                                                >
-                                                    Edit des
-                                                </motion.button>
-                                            )}
-                                        </div>
-
+                                        {editingTitleId === faq.id ? null : (
+                                            <motion.button
+                                                className="LexendRegular btn"
+                                                onClick={() => startEditTitle(faq)}
+                                                whileHover={{ y: -1 }}
+                                                whileTap={{ scale: 0.98 }}
+                                            >
+                                                Edit Title
+                                            </motion.button>
+                                        )}
+                                        {editingDesId === faq.id ? null : (
+                                            <motion.button
+                                                className="LexendRegular btn"
+                                                onClick={() => startEditDes(faq)}
+                                                whileHover={{ y: -1 }}
+                                                whileTap={{ scale: 0.98 }}
+                                            >
+                                                Edit Des
+                                            </motion.button>
+                                        )}
                                         <motion.button
                                             className="LexendRegular btn danger"
                                             onClick={() => onDelete(faq.id)}

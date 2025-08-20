@@ -2,6 +2,8 @@
     width: 100vw !important;
     border-radius: 0 !important;
     top: 0;
+    padding-left: 8.4375vw !important;
+    padding-right: 8.4375vw !important;
 }
 
 .ss-nav,
@@ -10,7 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 34px !important;
+    padding: 0 34px;
     height: 95px;
     border-radius: 100px;
     position: fixed;
@@ -26,11 +28,10 @@
 .ss-navUl {
     list-style: none;
     display: flex;
+    justify-content: space-between;
+    gap: 26px;
 }
 
-.ss-navUl li {
-    margin-right: 26px !important;
-}
 
 .ss-navUl li a {
     color: white;
@@ -132,9 +133,14 @@
 
     .ss-nav,
     .ss-navShow {
-        padding: 0 24px !important;
+        padding: 0 24px;
         width: calc(100vw - 5.5555vw - 5.5555vw);
     }
+    .ss-navShow {
+        padding-left: 5.5555vw !important;
+        padding-right: 5.5555vw !important;
+    }
+
 
     .ss-navLogo {
         width: 116.86px;
@@ -155,6 +161,10 @@
     .ss-navShow {
         width: calc(100vw - 3.0769vw - 3.0769vw);
         padding: 0 14px;
+    }
+    .ss-navShow {
+        padding-left: 3.0769vw;
+        padding-right: 3.0769vw;
     }
 
     .ss-navLogo {

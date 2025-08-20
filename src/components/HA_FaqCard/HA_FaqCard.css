@@ -1,25 +1,20 @@
 .faqCard {
   padding: 50px;
+  background-color: var(--second-color);
   border: 1px solid var(--second-color);
   border-radius: 14px;
   display: flex;
   flex-direction: column;
   width: 40.7vw;
+  min-height: 347px;
   background-color: var(--third-color);
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-}
-
-.faqCard:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, .25);
-  border-color: var(--second-color);
 }
 
 .FAQ-title {
   color: var(--text-color);
-  font-weight: 500;
   font-size: 20px;
   width: 100%;
+
 }
 
 .FAQ-divider {
@@ -35,26 +30,15 @@
   max-width: 682.5px;
 }
 
-.aa-contain {
-  background-color: var(--third-color);
-}
-
 .aa-faq-container-card {
   display: grid;
   grid-template-columns: repeat(2, minmax(280px, 1fr));
   gap: 30px;
-
-  /* added */
-  position: relative;
-}
-
-.aa-faq-container-card> :nth-last-child(-n+2) {
-  background: linear-gradient(to top, var(--third-color) 50%, transparent 100%);
 }
 
 .aa-faq-btn {
   width: 193px;
-  height: 63px;
+  padding: 18px 24px;
   background-color: var(--third-color);
   border: 1px solid var(--second-color);
   border-radius: 100px;
@@ -65,19 +49,6 @@
   margin: 0 auto;
   font-size: 18px;
   cursor: pointer;
-  font-size: 18px;
-
-  /* added */
-  transition: transform .15s ease, box-shadow .2s ease, filter .2s ease, opacity .2s ease;
-}
-
-.aa-faq-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, .25);
-}
-
-.aa-faq-btn:active {
-  transform: scale(.98);
 }
 
 .aa-hide-content {
@@ -90,7 +61,7 @@
 
 .aa-change-content {
   width: 193px;
-  height: 63px;
+  padding: 18px 24px;
   background-color: var(--third-color);
   border: 1px solid var(--second-color);
   border-radius: 100px;
@@ -101,18 +72,29 @@
   margin: 20px auto 0 auto;
   font-size: 18px;
   cursor: pointer;
-
-  /* added */
-  transition: transform .15s ease, box-shadow .2s ease, filter .2s ease, opacity .2s ease;
 }
 
-.aa-change-content:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, .25);
+.aa-change-content img {
+  width: 22px;
+  transform: rotate(180deg);
 }
 
-.aa-change-content:active {
-  transform: scale(.98);
+.aa-card-shadow {
+  border: 2px solid var(--second-color);
+  background: linear-gradient(to bottom, var(--second-color), var(--third-color));
+  border-image: linear-gradient(to bottom, #262626, #1C1C1C);
+  border-image-slice: 1;
+  border-bottom: none;
+  border-radius: 14px;
+
+}
+
+.aa-card-shadow-text {
+  background: linear-gradient(to bottom, #e4e1e1, #5c5b5b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .aa-faq-btn img {
@@ -122,25 +104,11 @@
 .aa-container-height {
   max-height: 840px;
   overflow: hidden;
-  transition: max-height 0.7s ease;
+  transition: max-height 0.9s ease;
 }
 
 .aa-container-normal-height {
   max-height: 1700px;
-
-  /* added for smoother expand */
-  transition: max-height .5s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-/* added fade effect for bottom when collapsed */
-.aa-fade-mask {
-  pointer-events: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 80px;
-  background: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, rgba(26, 26, 26, .9) 80%, rgba(26, 26, 26, 1) 100%);
 }
 
 @media screen and (max-width:1440px) {
@@ -148,21 +116,18 @@
     gap: 20px;
   }
 
-  .faqCard {
-    width: 43.6vw;
-    padding: 40px;
-  }
-
+  .aa-change-content,
   .aa-faq-btn {
     width: 155px;
     height: 49px;
     font-size: 14px;
   }
 
-  .aa-change-content {
-    width: 155px;
-    height: 49px;
-    font-size: 14px;
+  .faqCard {
+    width: 43.6vw;
+    padding: 40px;
+    min-height: 295px;
+    border-radius: 10px;
   }
 
   .FAQ-des {
@@ -172,13 +137,15 @@
   .FAQ-title {
     width: 32.8vw;
     font-size: 18px;
+
   }
 
-  .FAQ-divider  {
+  .FAQ-divider {
     width: 100%;
     margin: 24px 0;
   }
 }
+
 
 @media screen and (max-width:992px) {
   .aa-faq-container-card {
@@ -186,18 +153,10 @@
     place-items: center;
   }
 
-  .aa-faq-container-card> :nth-last-child(-n+1) {
-    border: 1px solid transparent;
-    background:
-      linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-      linear-gradient(180deg, var(--second-color) 0%, rgba(26, 26, 26, 0) 100%) border-box;
-    border-radius: 12px;
-  }
-
   .faqCard {
-    width: 91.7vw;
-    height: 293px;
+    width: 100%;
     padding: 20px;
+    min-height: 335px;
   }
 
   .aa-container-height {
@@ -218,7 +177,7 @@
     font-size: 16px;
   }
 
-  .FAQ-divider  {
+  .FAQ-divider {
     margin: 20px 0;
   }
 }

@@ -1,38 +1,41 @@
-.OBC-container{
+.OBC-container {
     background-color: var(--primary-color);
     position: relative;
     overflow: hidden;
-    /* border-radius: 40px 14px; */
-    border: 1px solid  rgba(202, 255, 51, 0.1);
-    /* border-image-source: linear-gradient(280.49deg, rgba(202, 255, 51, 0.1) 0%, rgba(38, 38, 38, 0) 17.02%, rgba(38, 38, 38, 0) 68.88%, rgba(38, 38, 38, 0.8) 100%); */
+    border: 1px solid rgba(202, 255, 51, 0.1);
     padding: 50px;
- 
-    max-width: 38.9583vw;
-       transition: all 0.8s ease;
-    .OB-card-title{
+    min-height: 330px;
+    width: 38.9583vw;
+    transition: all 0.8s ease;
+
+    .OB-card-title {
         display: flex;
         gap: 20px;
         align-items: center;
-    .OBC-card{
-        padding-top: 0;
+
+        .OBC-card {
+            padding-top: 0;
+        }
+
+        h3 {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 150%;
+            color: var(--text-color);
+            padding-bottom: 30px;
+            transform: translateY(25%);
+        }
     }
-    h3{
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 150%;
-        color: var(--text-color);
-        padding-bottom: 30px;
-        transform: translateY(25%);
-    }
-    }
-    p{
+
+    p {
         font-weight: 300;
         font-size: 18px;
         line-height: 150%;
         color: var(--paragraph-color);
     }
 }
-.OBC-container::before{
+
+.OBC-container::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -43,7 +46,8 @@
     opacity: 0.5;
     background-image: url('assets/images/careers/asfalt-careers.png');
 }
-.OBC-container::after{
+
+.OBC-container::after {
     content: "";
     position: absolute;
     width: 116px;
@@ -56,45 +60,55 @@
 }
 
 @media screen and (max-width:1440px) {
-    .OBC-container{
-        max-width: 42.3611vw;
+    .OBC-container {
+        width: 42.3611vw;
+        min-height: 276px;
         padding: 40px;
-            transition:all 0.9s ease;
-        .OB-card-title{
+        transition: all 0.9s ease;
+
+        .OB-card-title {
             display: flex;
             gap: 20px;
-                
-        h3{
-            font-size: 20px;
-            padding-bottom: 24px;
+
+            h3 {
+                font-size: 20px;
+                padding-bottom: 24px;
+            }
         }
+
+        p {
+            font-size: 16px;
         }
-    p{
-        font-size: 16px;
+    }
+
+    .OBC-container::after {
+        width: 100px;
+        height: 100px;
     }
 }
-.OBC-container::after{
-    width: 100px;
-    height: 100px;
-}
-}
+
 @media screen and (max-width:992px) {
-    .OBC-container{
-        max-width: 91.7948vw;
+    .OBC-container {
+        width: 100%;
+        min-height: 245px;
         padding: 24px;
         transition: all 0.9s ease;
-        .OB-card-title{
+
+        .OB-card-title {
             gap: 10px;
-        h3{
-            font-size: 18px;
+
+            h3 {
+                font-size: 18px;
+            }
         }
-        }
-        p{
+
+        p {
             font-size: 14px;
         }
-}
-.OBC-container::after{
-    width: 60px;
-    height: 60px;
-}
+    }
+
+    .OBC-container::after {
+        width: 60px;
+        height: 60px;
+    }
 }
