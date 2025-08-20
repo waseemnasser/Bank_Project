@@ -6,7 +6,7 @@
 
 .slider-container {
     position: relative;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .backgroundSLider .swiper {
@@ -93,6 +93,7 @@
     transform: translateX(50%);
 }
 
+
 .custom-prev,
 .custom-next {
     position: absolute;
@@ -105,9 +106,6 @@
     background-color: var(--primary-color);
     border-radius: 50%;
     padding: 14px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
 }
 
@@ -119,13 +117,13 @@
 /* icons */
 .custom-prev {
     left: -10px;
-    background: var(--primary-color) url("assets/images/Icons/slider-icons/left-arrow.svg") no-repeat center;
+    background: url("assets/images/Icons/slider-icons/left-arrow.svg") no-repeat center;
     background-size: 50%;
 }
 
 .custom-next {
     right: -10px;
-    background: var(--primary-color) url("assets/images/Icons/slider-icons/right-arrow.svg") no-repeat center;
+    background: url("assets/images/Icons/slider-icons/right-arrow.svg") no-repeat center;
     background-size: 50%;
 }
 

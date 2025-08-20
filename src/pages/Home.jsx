@@ -12,8 +12,8 @@ export default function Home() {
       <OurProduct />
       <UseCase />
       <Features />
-      <OurTestimonials />
       <FAQ />
+      <OurTestimonials />
       <FooterTitleHome />
     </div>
   );

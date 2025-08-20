@@ -33,8 +33,8 @@ const HA_FaqCard = () => {
                         delay: index * 0.1, // staggered animation
                      }}
                   >
-                     <p className="title LexendMedium">{card.title}</p>
-                     <div className="divider"></div>
+                     <p className="FAQ-title LexendMedium">{card.title}</p>
+                     <div className="FAQ-divider "></div>
                      <p className="FAQ-des LexendLight">{card.des}</p>
                   </motion.div>
                ))}

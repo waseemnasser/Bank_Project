@@ -1,6 +1,7 @@
 .ss-useCases {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 60px;
     gap: 100px;
 
@@ -10,7 +11,6 @@
         display: grid;
         grid-template-columns: repeat(2, max-content);
         justify-content: center;
-        /* centers the grid itself */
         gap: 20px;
         border-radius: 20px;
         background-color: var(--primary-color);
