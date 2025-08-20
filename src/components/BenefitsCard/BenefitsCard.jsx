@@ -1,6 +1,6 @@
 import "./BenefitsCard.css"
 import IconShape from "../iconShape/IconShape"
-export const BenefitsCard = ({ borderClassName,sizeIco, srcIco, classNameIco, title, paragraph}) => {
+export default function BenefitsCard ({ borderClassName,sizeIco, srcIco, classNameIco, title, paragraph}) {
   return (
     <div className={`OBC-container ${borderClassName} `}>
         <div className="OB-card-title">

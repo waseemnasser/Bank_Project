@@ -1,6 +1,6 @@
 import "./iconShape.css";
 
-function IconShape({icon, size = 98, className = ""}) {
+export default function IconShape({icon, size = 98, className = ""}) {
     return (
         <div
             className={`ss-icon-container ${className}`}
@@ -14,5 +14,3 @@ function IconShape({icon, size = 98, className = ""}) {
         </div>
     );
 };
-
-export default IconShape;

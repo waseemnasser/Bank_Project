@@ -23,7 +23,7 @@ const item = {
     show: { opacity: 1, y: 0, transition: { duration: 0.35, ease } },
 };
 
-const HomeHero = () => {
+export default function HomeHero () {
     const { pathname } = useLocation();
     const prefersReduced = useReducedMotion();
 
@@ -244,5 +244,3 @@ const HomeHero = () => {
         </div>
     );
 };
-
-export default HomeHero;

@@ -1,9 +1,9 @@
 import HA_JobOpeningsCard from "../HA_JobOpeningsCard/HA_JobOpeningsCard";
-import { SectionTitle } from "../SectionTitle/SectionTitle";
+import SectionTitle  from "../SectionTitle/SectionTitle";
 
 
 
-const HA_JobOpeningsSection = () => {
+export default function HA_JobOpeningsSection () {
   return (
     <div className="white-space section-MarginBottom">
       <SectionTitle
@@ -16,5 +16,3 @@ const HA_JobOpeningsSection = () => {
     </div>
   );
 };
-
-export default HA_JobOpeningsSection;

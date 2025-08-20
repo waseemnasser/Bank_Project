@@ -1,5 +1,5 @@
 import AA_MissionVision from "../AA_MissionVision/AA_MissionVision"
-import { SectionTitle } from "../SectionTitle/SectionTitle"
+import SectionTitle  from "../SectionTitle/SectionTitle"
 
 import "./AA_MvDisplay.css"
 export default function AA_MvDisplay() {

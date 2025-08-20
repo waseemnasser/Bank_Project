@@ -1,6 +1,6 @@
 import './HeroDesgin.css'
 
-function HeroDesgin({ preTitle = false, titleWhite, secondtitleWhite, titleGreen, description, image }) {
+export default function HeroDesgin({ preTitle = false, titleWhite, secondtitleWhite, titleGreen, description, image }) {
   return (
     <div className="rh-hero white-space">
       <div className='rh-heroLeft'>
@@ -18,5 +18,3 @@ function HeroDesgin({ preTitle = false, titleWhite, secondtitleWhite, titleGreen
     </div>
   );
 };
-
-export default HeroDesgin;

@@ -1,9 +1,9 @@
 import { pressData } from "../../data/pressData";
 import './PressReleases.css'
-import { SectionTitle } from "../SectionTitle/SectionTitle"
+import SectionTitle  from "../SectionTitle/SectionTitle"
 import React, { useState, useEffect } from "react";
 
-function PressReleases() {
+export default function PressReleases() {
     const [pressCards, setCards] = useState([])
 
     useEffect(() => {
@@ -40,4 +40,3 @@ function PressReleases() {
         </section>
     );
 }
-export default PressReleases;

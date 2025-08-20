@@ -2,7 +2,7 @@ import { useState } from "react";
 import FeaturesCard from "../FeaturesCard/FeaturesCard";
 import FeaturesFilter from "../FeaturesFilter/FeaturesFilter";
 import "./Featured.css";
-import { SectionTitle } from "../SectionTitle/SectionTitle";
+import SectionTitle  from "../SectionTitle/SectionTitle";
 import { motion, AnimatePresence } from "framer-motion";
 
 const ease = [0.22, 1, 0.36, 1];

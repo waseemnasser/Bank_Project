@@ -1,4 +1,4 @@
-import { SectionTitle } from "../SectionTitle/SectionTitle";
+import SectionTitle from "../SectionTitle/SectionTitle";
 import ValueCard from "../ValueCard/ValueCard";
 
 

@@ -1,7 +1,7 @@
 import "./FooterTitle.css"
 import  {Link}  from "react-router-dom"
 
-const FooterTitle = ({title, paragraph}) => {
+export default function FooterTitle ({title, paragraph}) {
   return (
     <div className="FT-background section-MarginBottom"> 
       <div className="FooterTitle">
@@ -15,5 +15,3 @@ const FooterTitle = ({title, paragraph}) => {
     </div>
   )
 }
-
-export default FooterTitle
