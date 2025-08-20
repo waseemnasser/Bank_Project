@@ -3,8 +3,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 53px auto;
-    width: 69.0625vw;
     border-radius: 20px;
     padding: 100px 0;
     border: 1px solid var(--second-color);
