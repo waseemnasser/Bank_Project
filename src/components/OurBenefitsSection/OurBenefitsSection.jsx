@@ -6,7 +6,7 @@ function OurBenefitsSection() {
     
   return (
     <div className="Ob-section-container white-space section-MarginBottom">
-        <SectionTitle titlewhite={"Our"} titlegreen={"Benefits"} filter={false} widthtitle={1296} paragraph={"At YourBank, we value our employees and are dedicated to their well-being and success. We offer a comprehensive range of benefits designed to support their personal and professional growth."}></SectionTitle>
+        <SectionTitle titlewhite={"Our"} titlegreen={" Benefits"} filter={false} widthtitle={1296} paragraph={"At YourBank, we value our employees and are dedicated to their well-being and success. We offer a comprehensive range of benefits designed to support their personal and professional growth."}></SectionTitle>
         <div className="OB-card-container">
           {exportedBFCardData.map((ele, index)=>{
             return(

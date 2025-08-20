@@ -6,6 +6,7 @@
 
 .slider-container {
     position: relative;
+    width: 100%;
 }
 
 .backgroundSLider .swiper {
@@ -108,6 +109,11 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.custom-prev svg,
+.custom-next svg {
+    display: none;
 }
 
 /* icons */

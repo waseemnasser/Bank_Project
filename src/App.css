@@ -6,15 +6,28 @@
     background-position: top left;
 }
 
+.gpu {
+    will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
 @media screen and (max-width:1440px) {
     .app {
         padding-top: 30px;
     }
-    
+
 }
+
 @media screen and (max-width:992px) {
     .app {
         padding-top: 40px;
     }
-    
+
 }

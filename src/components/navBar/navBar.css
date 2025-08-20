@@ -1,4 +1,11 @@
-nav {
+.ss-navShow {
+    width: 100vw !important;
+    border-radius: 0 !important;
+    top: 0;
+}
+
+.ss-nav,
+.ss-navShow {
     background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
@@ -9,10 +16,10 @@ nav {
     position: fixed;
     width: calc(100vw - 8.4375vw - 8.4375vw);
     z-index: 5;
+    transition: all 0.5s;
 
     .ss-navLogo {
         width: 155.83px;
-        cursor: pointer;
     }
 
     .ss-navUl {
@@ -40,6 +47,7 @@ nav {
         button {
             background: none;
             border: none;
+            margin-right: 30px;
 
             a {
                 text-decoration: none;
@@ -48,9 +56,9 @@ nav {
             }
         }
 
-        button:first-of-type {
+        /* button:first-of-type {
             margin-right: 30px;
-        }
+        } */
 
         .ss-button-active {
             color: var(--primary-color);
@@ -64,25 +72,51 @@ nav {
         display: none;
         background: none;
         border: none;
+        cursor: pointer;
     }
 
     .ss-mobile-nav {
         background-color: var(--primary-color);
         padding: 16px;
-        width: 200px;
-        text-align: center;
+        width: 100vw;
+        height: 100vh;
         border-radius: 20px;
         position: absolute;
-        top: 100%;
-        right: 0;
+        top: -40px;
+        left: 0;
         z-index: 3;
-        display: none;
+        transform: translateX(calc(-100vw - 72px));
+        transition: all 1s;
+
+        .ss-mobile-nav-iconContainer {
+            width: 40px;
+            height: 40px;
+            background-color: var(--button-keyworld-color);
+            transform: translateX(90vw);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+
+            img {
+                transform: rotate(45deg);
+                width: 30px;
+            }
+        }
 
         .ss-mobile-navList {
             list-style: none;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
             li {
-                margin: 16px 0;
+                margin: 16px;
 
                 a {
                     text-decoration: none;
@@ -101,7 +135,9 @@ nav {
 }
 
 @media screen and (max-width: 1440px) {
-    nav {
+
+    .ss-nav,
+    .ss-navShow {
         padding: 0 24px !important;
         width: calc(100vw - 5.5555vw - 5.5555vw);
 
@@ -125,7 +161,9 @@ nav {
 
 
 @media screen and (max-width:992px) {
-    nav {
+
+    .ss-nav,
+    .ss-navShow {
         width: calc(100vw - 3.0769vw - 3.0769vw);
         padding: 0 14px;
 
@@ -148,11 +186,8 @@ nav {
         }
 
         .ss-mobile-nav.ss-show {
-            display: block;
+            transform: translateX(-72px);
         }
 
-        .ss-mobile-nav.ss-notShow {
-            display: none;
-        }
     }
 }
