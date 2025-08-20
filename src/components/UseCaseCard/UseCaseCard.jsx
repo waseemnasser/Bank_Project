@@ -2,7 +2,7 @@ import React from 'react'
 import IconShape from '../iconShape/IconShape'
 import '../UseCaseCard/UseCaseCard.css'
 
-function UseCaseCard({ CardIcon, CardDescription }) {
+export default function UseCaseCard({ CardIcon, CardDescription }) {
   return (
     <div className='useCaseCard'>
       <IconShape
@@ -14,5 +14,3 @@ function UseCaseCard({ CardIcon, CardDescription }) {
     </div>
   )
 }
-
-export default UseCaseCard

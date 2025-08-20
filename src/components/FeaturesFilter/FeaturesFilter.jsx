@@ -2,7 +2,7 @@ import "./FeaturesFilter.css";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 
-function FeaturesFilter({ group, setGroup }) {
+export default function FeaturesFilter({ group, setGroup }) {
   const btnRefs = useRef([]);
 
   const tabs = [
@@ -46,4 +46,3 @@ function FeaturesFilter({ group, setGroup }) {
     </div>
   );
 }
-export default FeaturesFilter;

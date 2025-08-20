@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { SectionTitle } from "../SectionTitle/SectionTitle";
-import { SliderSec } from "../SliderSec/SliderSec";
+import SectionTitle from "../SectionTitle/SectionTitle";
+import  SliderSec  from "../SliderSec/SliderSec";
 import { motion } from "framer-motion";
 
 const ease = [0.22, 1, 0.36, 1];
 
-function OurTestimonialsSiction() {
+export default function OurTestimonialsSiction() {
   const [userType, setUserType] = useState("Individuals");
 
   const handleUserTypeChange = (type) => {
@@ -33,5 +33,3 @@ function OurTestimonialsSiction() {
     </motion.section>
   );
 }
-
-export default OurTestimonialsSiction;

@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react'
 import "./navBar.css"
 import { NavLink } from 'react-router-dom'
 
-function NavBar() {
-    let list = ["Home", "Carrers", "About", "Security"]
+export default function NavBar() {
+    let list = ["Home", "Careers", "About", "Security"]
     let LinkList = ["/", "/careers", "/about", "/security"]
-    let buttonsList = ["Sign Up", "Login", "DashBoard"]
+    let buttonsList = ["Sign Up", "Login", "Dashboard"]
     let buttonsLinksList = ["/signup", "/login", "/dashBoard"]
 
     const [show, setShow] = useState(false);
@@ -56,5 +56,3 @@ function NavBar() {
         </nav>
     )
 }
-
-export default NavBar

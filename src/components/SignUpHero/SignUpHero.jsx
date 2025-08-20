@@ -1,5 +1,5 @@
 import LogSignHero from "../LogSignHero/LogSignHero"
-function SignUpHero() {
+export default function SignUpHero() {
     return (
         <div>
             <LogSignHero
@@ -11,4 +11,3 @@ function SignUpHero() {
     )
 }
 
-export default SignUpHero

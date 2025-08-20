@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from '../HeroDesgin/HeroDesgin'
 
-function AboutHero() {
+export default function AboutHero() {
     return (
         <div className='hero-mt section-MarginBottom'>
             <Hero
@@ -14,5 +14,3 @@ function AboutHero() {
         </div>
     )
 }
-
-export default AboutHero

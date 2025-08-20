@@ -18,7 +18,7 @@ const item = {
     show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.45, ease } },
 };
 
-function ValueCard() {
+export default function ValueCard() {
     const [valueCards, setCards] = useState([]);
 
     useEffect(() => {
@@ -55,4 +55,3 @@ function ValueCard() {
     );
 }
 
-export default ValueCard;

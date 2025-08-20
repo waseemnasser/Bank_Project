@@ -1,7 +1,7 @@
 import { HA_FaqCard_Data } from "../../data/HA_FaqCard_Data";
 import "./HA_FaqCard.css";
 import { useEffect, useState } from "react";
-const HA_FaqCard = () => {
+export default function HA_FaqCard  () {
    const data = localStorage.getItem('faqData')
    console.log(data)
    const data2 = JSON.parse(data)
@@ -30,5 +30,3 @@ const HA_FaqCard = () => {
    )
 
 };
-
-export default HA_FaqCard;

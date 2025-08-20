@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { SectionTitle } from "../SectionTitle/SectionTitle";
+import  SectionTitle from "../SectionTitle/SectionTitle";
 import IconShape from "../iconShape/IconShape";
 import "./ProductsSection.css";
 import { productsForBusinesses, productsForIndividuals } from "../../data/OurProducts";

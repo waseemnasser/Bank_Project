@@ -1,5 +1,5 @@
 import FooterTitle from "../FooterTitle/FooterTitle"
-function FooterTitleHome() {
+export default function FooterTitleHome() {
     return (
         <div className="white-space">
             <FooterTitle
@@ -9,4 +9,3 @@ function FooterTitleHome() {
         </div>
     )
 }
-export default FooterTitleHome

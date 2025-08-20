@@ -2,9 +2,9 @@ import "./ProtectYou.css";
 import { protectData } from "../../data/protectData";
 import IconShape from "../iconShape/IconShape"
 import React, { useState, useEffect } from "react";
-import { SectionTitle } from "../SectionTitle/SectionTitle";
+import  SectionTitle  from "../SectionTitle/SectionTitle";
 
-function ProtectYou() {
+export default function ProtectYou() {
     const [protectCards, setCards] = useState([])
 
     useEffect(() => {
@@ -45,4 +45,3 @@ function ProtectYou() {
         </section>
     );
 }
-export default ProtectYou

@@ -1,7 +1,7 @@
 import "./OurBenefitsSection.css";
-import { SectionTitle } from "../SectionTitle/SectionTitle";
+import SectionTitle  from "../SectionTitle/SectionTitle";
 import { exportedBFCardData } from "../../data/OurBenefitsCard";
-import { BenefitsCard } from "../BenefitsCard/BenefitsCard";
+import BenefitsCard  from "../BenefitsCard/BenefitsCard";
 import { motion } from "framer-motion";
 
 const ease = [0.22, 1, 0.36, 1];
@@ -54,7 +54,7 @@ export default function OurBenefitsSection() {
           <motion.div
             key={index}
             variants={card}
-            whileHover={{ y: -3 }}           // micro-lift only (no layout shift)
+            whileHover={{ y: -3 }}         
             transition={{ duration: 0.2 }}
           >
             <BenefitsCard

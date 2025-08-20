@@ -1,5 +1,5 @@
 import HA_FaqCard from "../HA_FaqCard/HA_FaqCard"
-import { SectionTitle } from "../SectionTitle/SectionTitle"
+import SectionTitle  from "../SectionTitle/SectionTitle"
 
 import "./AA_FAQ_Display.css"
 

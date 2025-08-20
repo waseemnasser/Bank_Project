@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import IconShape from '../iconShape/IconShape'
 
 
-const LogSignHero = ({ title, description, isSignUp }) => {
+export default function LogSignHero ({ title, description, isSignUp })  {
   const pathName = window.location.pathname;
 
   return (
@@ -54,5 +54,3 @@ const LogSignHero = ({ title, description, isSignUp }) => {
     </div>
   )
 }
-
-export default LogSignHero

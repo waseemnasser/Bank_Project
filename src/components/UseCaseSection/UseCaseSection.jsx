@@ -1,4 +1,4 @@
-import { SectionTitle } from "../SectionTitle/SectionTitle"
+import  SectionTitle  from "../SectionTitle/SectionTitle"
 import UseCaseRow from "../UseCaseRow/UseCaseRow"
 import { UseCaseData_1 } from "../../data/UseCaseCardData"
 import { UseCaseData_2 } from "../../data/UseCaseCardData"
@@ -6,7 +6,7 @@ import { individuals_1 } from "../../data/UseCaseCardData"
 import { individuals_2 } from "../../data/UseCaseCardData"
 import "./UseCaseSection.css"
 
-const UseCase = () => {
+export default function UseCase () {
     return (
         <div className="white-space section-MarginBottom">
             <SectionTitle titlegreen="Use Cases" paragraph="At YourBank, we cater to the diverse needs of individuals and businesses alike, offering a wide range of financial solutions" />
@@ -15,5 +15,3 @@ const UseCase = () => {
         </div>
     )
 }
-
-export default UseCase

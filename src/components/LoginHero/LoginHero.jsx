@@ -1,6 +1,6 @@
 import LogSignHero from "../LogSignHero/LogSignHero"
 
-function LoginHero() {
+export default function LoginHero() {
     return (
         <div>
             <LogSignHero
@@ -10,5 +10,3 @@ function LoginHero() {
         </div>
     )
 }
-
-export default LoginHero

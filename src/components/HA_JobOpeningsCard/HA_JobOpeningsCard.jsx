@@ -22,7 +22,7 @@ const rowItem = {
   show: { opacity: 1, y: 0, transition: { duration: 0.28, ease } },
 };
 
-const HA_JobOpeningsCard = () => {
+export default function HA_JobOpeningsCard  () {
   const prefersReduced = useReducedMotion();
 
   return (
@@ -45,7 +45,6 @@ const HA_JobOpeningsCard = () => {
             {cardData.head}
           </motion.h2>
 
-          {/* Option chips */}
           <motion.div className="optionsContainer" variants={rowItem}>
             {cardData.options?.map((option, idx) => (
               <motion.button
@@ -98,4 +97,3 @@ const HA_JobOpeningsCard = () => {
   );
 };
 
-export default HA_JobOpeningsCard;

@@ -1,8 +1,8 @@
 import Featured from "../Featured/Featured";
-import { SectionTitle } from "../SectionTitle/SectionTitle";
+import SectionTitle from "../SectionTitle/SectionTitle";
 
 
-const HA_OurFeaturesSection = () => {
+export default function HA_OurFeaturesSection () {
   return (
     <div>
       <SectionTitle
@@ -16,5 +16,3 @@ const HA_OurFeaturesSection = () => {
     </div>
   );
 };
-
-export default HA_OurFeaturesSection;

@@ -61,7 +61,6 @@ export default function Dashboard() {
         setEditingTitleId(null);
     };
 
-    // start edit description
     const startEditDes = (faq) => {
         setEditingDesId(faq.id);
         setEditDesValue(faq.des);
@@ -73,8 +72,6 @@ export default function Dashboard() {
         );
         setEditingDesId(null);
     };
-
-    // animations
     const section = {
         hidden: { opacity: 0, y: 18 },
         show: { opacity: 1, y: 0, transition: { duration: 0.45, ease } },
@@ -97,7 +94,6 @@ export default function Dashboard() {
             initial="hidden"
             animate="show"
         >
-            {/* Form card */}
             <div className="ss-dashForm">
                 <h2 className="LexendRegular">Add New FAQ</h2>
                 <form onSubmit={onAdd}>
@@ -142,7 +138,6 @@ export default function Dashboard() {
                 </div>
             </div>
 
-            {/* Table card */}
             <div className="ss-dashFAQ">
                 <table>
                     <thead>
@@ -163,7 +158,6 @@ export default function Dashboard() {
                                     animate="show"
                                     exit="exit"
                                 >
-                                    {/* Title cell */}
                                     <td className="LexendRegular ss-title">
                                         {editingTitleId === faq.id ? (
                                             <form
@@ -198,7 +192,6 @@ export default function Dashboard() {
                                         )}
                                     </td>
 
-                                    {/* Description cell */}
                                     <td className="LexendRegular ss-des">
                                         {editingDesId === faq.id ? (
                                             <form
@@ -233,7 +226,6 @@ export default function Dashboard() {
                                         )}
                                     </td>
 
-                                    {/* Actions */}
                                     <td className="btns">
                                         {editingTitleId === faq.id ? null : (
                                             <motion.button

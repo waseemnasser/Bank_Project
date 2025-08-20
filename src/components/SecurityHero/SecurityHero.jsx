@@ -1,6 +1,6 @@
 import HeroDesgin from "../HeroDesgin/HeroDesgin"
 
-function SecurityHero() {
+export default function SecurityHero() {
     return (
         <div className="hero-mt section-MarginBottom">
             <HeroDesgin
@@ -12,5 +12,3 @@ function SecurityHero() {
         </div>
     )
 }
-
-export default SecurityHero

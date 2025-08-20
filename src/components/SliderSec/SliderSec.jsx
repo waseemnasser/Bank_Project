@@ -8,7 +8,7 @@ import { motion, useReducedMotion } from "framer-motion";
 
 const ease = [0.22, 1, 0.36, 1];
 
-export const SliderSec = () => {
+export default function SliderSec () {
   const prefersReduced = useReducedMotion();
 
   return (
@@ -85,5 +85,3 @@ export const SliderSec = () => {
     </section>
   );
 };
-
-export default SliderSec;

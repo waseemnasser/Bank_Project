@@ -17,7 +17,7 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease } }
 };
 
-function Footer() {
+export default function Footer() {
   return (
     <motion.footer
       initial="hidden"
@@ -26,7 +26,6 @@ function Footer() {
     >
       <motion.div className="aa-footer" variants={container}>
 
-        {/* Logo */}
         <motion.img
           src="assets/images/Home/logo.png"
           alt="logo"
@@ -35,7 +34,6 @@ function Footer() {
           transition={{ type: "spring", stiffness: 200 }}
         />
 
-        {/* Nav */}
         <motion.ul className="aa-ul aa-general-ul LexendRegular" variants={container}>
           {["Home", "Careers", "About", "Security"].map((link, i) => (
             <motion.li key={i} variants={item}>
@@ -46,7 +44,6 @@ function Footer() {
 
         <div className='aa-border-bottom'></div>
 
-        {/* Contact */}
         <motion.ul className='aa-general-ul aa-ul-gap LexendRegular' variants={container}>
           <motion.li variants={item}>
             <Link to="mailto:hello@skillbirdge.com">
@@ -67,7 +64,6 @@ function Footer() {
 
         <div className='aa-border-bottom'></div>
 
-        {/* Social + Terms */}
         <motion.div className='Terms-of-Service' variants={container}>
           <motion.ul className='aa-general-ul aa-footer-social-ul' variants={container}>
             {[
@@ -101,4 +97,3 @@ function Footer() {
   )
 }
 
-export default Footer
