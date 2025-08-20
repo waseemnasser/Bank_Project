@@ -28,7 +28,6 @@ export default function Featured() {
       >
         <FeaturesFilter group={group} setGroup={setGroup} />
 
-        {/* crossfade cards when switching tabs */}
         <AnimatePresence mode="wait">
           <motion.div
             key={group}

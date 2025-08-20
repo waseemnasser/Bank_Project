@@ -38,7 +38,6 @@ export default function UseCasesRow({ useCaseData, indiv, title, para, reverce }
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
     >
-      {/* Left grid */}
       <motion.div
         className="WN_UseCaseCards gpu"
         variants={grid}
@@ -54,14 +53,13 @@ export default function UseCasesRow({ useCaseData, indiv, title, para, reverce }
               prefersReduced ? {} : { y: -4, scale: 1.02 }
             }
             transition={{ duration: 0.25 }}
-            style={{ width: "100%" }} // keeps your grid sizes intact
+            style={{ width: "100%" }}
           >
             <UseCaseCard CardIcon={item.icon} CardDescription={item.description} />
           </motion.div>
         ))}
       </motion.div>
 
-      {/* Right content */}
       <motion.div
         className="ss-useCasesIndivs gpu"
         variants={row}
@@ -99,7 +97,6 @@ export default function UseCasesRow({ useCaseData, indiv, title, para, reverce }
                 <p className="LexendLight ss-useCasesIndivsItemP">{item.title}</p>
               </motion.div>
 
-              {/* keep the dashed divider logic as-is */}
               {index !== 2 ? <div className="ss-dashed" /> : null}
             </motion.div>
           ))}

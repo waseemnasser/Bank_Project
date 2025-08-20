@@ -63,7 +63,6 @@
     padding: 14px 30px;
 }
 
-/* hide mobile menu stuff by default */
 .menu {
     display: none;
     background: none;
@@ -73,7 +72,6 @@
 
 .ss-mobile-nav {
     display: none;
-    /* ✅ never show on desktop */
     background-color: var(--primary-color);
     padding: 16px;
     width: 100vw;
@@ -130,7 +128,6 @@
     border-radius: 82px;
 }
 
-/* ================== MEDIA QUERIES ================== */
 @media screen and (max-width: 1440px) {
 
     .ss-nav,
@@ -164,13 +161,11 @@
         width: 101.29px;
     }
 
-    /* hide desktop nav on mobile */
     .ss-navUl,
     .ss-buttonsDiv {
         display: none;
     }
 
-    /* ✅ show burger only on mobile */
     .menu {
         display: block;
         width: fit-content;
@@ -180,7 +175,6 @@
         width: 56px;
     }
 
-    /* slide-in nav */
     .ss-mobile-nav {
         display: flex;
         flex-direction: column;
