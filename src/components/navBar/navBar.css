@@ -17,177 +17,176 @@
     width: calc(100vw - 8.4375vw - 8.4375vw);
     z-index: 5;
     transition: all 0.5s;
-
-    .ss-navLogo {
-        width: 155.83px;
-    }
-
-    .ss-navUl {
-        list-style: none;
-        display: flex;
-
-        li {
-            margin-right: 26px !important;
-
-            a {
-                color: white;
-                text-decoration: none;
-                font-size: 18px;
-            }
-        }
-
-        .ss-link-active {
-            background-color: var(--second-color);
-            padding: 12px 24px;
-            border-radius: 82px;
-        }
-    }
-
-    .ss-buttonsDiv {
-        button {
-            background: none;
-            border: none;
-            margin-right: 30px;
-
-            a {
-                text-decoration: none;
-                font-size: 18px;
-                color: white;
-            }
-        }
-
-        /* button:first-of-type {
-            margin-right: 30px;
-        } */
-
-        .ss-button-active {
-            color: var(--primary-color);
-            background-color: var(--button-keyworld-color);
-            border-radius: 82px;
-            padding: 14px 30px;
-        }
-    }
-
-    .menu {
-        display: none;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-
-    .ss-mobile-nav {
-        background-color: var(--primary-color);
-        padding: 16px;
-        width: 100vw;
-        height: 100vh;
-        border-radius: 20px;
-        position: absolute;
-        top: -40px;
-        left: 0;
-        z-index: 3;
-        transform: translateX(calc(-100vw - 72px));
-        transition: all 1s;
-
-        .ss-mobile-nav-iconContainer {
-            width: 40px;
-            height: 40px;
-            background-color: var(--button-keyworld-color);
-            transform: translateX(90vw);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-
-            img {
-                transform: rotate(45deg);
-                width: 30px;
-            }
-        }
-
-        .ss-mobile-navList {
-            list-style: none;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-
-            li {
-                margin: 16px;
-
-                a {
-                    text-decoration: none;
-                    color: white;
-                }
-            }
-
-            .ss-link-active {
-                background-color: var(--second-color);
-                padding: 12px 24px;
-                border-radius: 82px;
-            }
-
-        }
-    }
 }
 
+.ss-navLogo {
+    width: 155.83px;
+}
+
+.ss-navUl {
+    list-style: none;
+    display: flex;
+}
+
+.ss-navUl li {
+    margin-right: 26px !important;
+}
+
+.ss-navUl li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.ss-navUl .ss-link-active {
+    background-color: var(--second-color);
+    padding: 12px 24px;
+    border-radius: 82px;
+}
+
+.ss-buttonsDiv button {
+    background: none;
+    border: none;
+    margin-right: 30px;
+}
+
+.ss-buttonsDiv button a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+
+.ss-buttonsDiv .ss-button-active {
+    color: var(--primary-color);
+    background-color: var(--button-keyworld-color);
+    border-radius: 82px;
+    padding: 14px 30px;
+}
+
+/* hide mobile menu stuff by default */
+.menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.ss-mobile-nav {
+    display: none;
+    /* ✅ never show on desktop */
+    background-color: var(--primary-color);
+    padding: 16px;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 20px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    z-index: 3;
+    transform: translateX(calc(-100vw - 72px));
+    transition: all 0.6s ease;
+}
+
+.ss-mobile-nav-iconContainer {
+    width: 40px;
+    height: 40px;
+    background-color: var(--button-keyworld-color);
+    transform: translateX(90vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.ss-mobile-nav-iconContainer img {
+    transform: rotate(45deg);
+    width: 30px;
+}
+
+.ss-mobile-navList {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ss-mobile-navList li {
+    margin: 16px;
+}
+
+.ss-mobile-navList li a {
+    text-decoration: none;
+    color: white;
+}
+
+.ss-mobile-navList .ss-link-active {
+    background-color: var(--second-color);
+    padding: 12px 24px;
+    border-radius: 82px;
+}
+
+/* ================== MEDIA QUERIES ================== */
 @media screen and (max-width: 1440px) {
 
     .ss-nav,
     .ss-navShow {
         padding: 0 24px !important;
         width: calc(100vw - 5.5555vw - 5.5555vw);
+    }
 
-        .ss-navLogo {
-            width: 116.86px;
-        }
+    .ss-navLogo {
+        width: 116.86px;
+    }
 
-        .ss-navUl {
-            li {
-                a {
-                    font-size: 14px;
-                }
-            }
+    .ss-navUl li a {
+        font-size: 14px;
+    }
 
-            .ss-link-active {
-                padding: 10px 18px;
-            }
-        }
+    .ss-navUl .ss-link-active {
+        padding: 10px 18px;
     }
 }
 
-
-@media screen and (max-width:992px) {
+@media screen and (max-width: 992px) {
 
     .ss-nav,
     .ss-navShow {
         width: calc(100vw - 3.0769vw - 3.0769vw);
         padding: 0 14px;
+    }
 
-        .ss-navLogo {
-            width: 101.29px;
-        }
+    .ss-navLogo {
+        width: 101.29px;
+    }
 
-        .menu {
-            display: block;
-            width: fit-content;
+    /* hide desktop nav on mobile */
+    .ss-navUl,
+    .ss-buttonsDiv {
+        display: none;
+    }
 
-            .ss-menuIcon {
-                width: 56px;
-            }
-        }
+    /* ✅ show burger only on mobile */
+    .menu {
+        display: block;
+        width: fit-content;
+    }
 
-        .ss-navUl,
-        .ss-buttonsDiv {
-            display: none;
-        }
+    .ss-menuIcon {
+        width: 56px;
+    }
 
-        .ss-mobile-nav.ss-show {
-            transform: translateX(-72px);
-        }
+    /* slide-in nav */
+    .ss-mobile-nav {
+        display: flex;
+        flex-direction: column;
+    }
 
+    .ss-mobile-nav.ss-show {
+        transform: translateX(-72px);
     }
 }

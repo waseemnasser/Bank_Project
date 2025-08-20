@@ -49,8 +49,6 @@ export const SliderSec = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-
-        {/* Arrows OUTSIDE Swiper, pinned in place */}
         <button className="custom-prev" aria-label="Previous testimonials">
           <motion.svg
             width="18"
@@ -67,7 +65,6 @@ export const SliderSec = () => {
             <path d="M15 18l-6-6 6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </motion.svg>
         </button>
-
         <button className="custom-next" aria-label="Next testimonials">
           <motion.svg
             width="18"
