@@ -5,7 +5,6 @@ import { motion, useReducedMotion } from "framer-motion";
 
 const ease = [0.22, 1, 0.36, 1];
 
-// Section + item variants (clean stagger)
 const section = {
     hidden: { opacity: 0, y: 16 },
     show: { opacity: 1, y: 0, transition: { duration: 0.45, ease } },
@@ -33,7 +32,6 @@ const HomeHero = () => {
             className={`ss-homeHero white-space ${pathname === "/Bank_Project/" ? "homeHero-mt" : "hero-mt"
                 } section-MarginBottom`}
         >
-            {/* LEFT: Copy block */}
             <motion.div
                 className="ss-descriptionDiv gpu"
                 variants={stagger}
@@ -73,7 +71,6 @@ const HomeHero = () => {
                 </motion.button>
             </motion.div>
 
-            {/* RIGHT: Card stack + widgets */}
             <motion.div
                 className="ss-exchangeContainer gpu"
                 variants={section}
@@ -84,7 +81,6 @@ const HomeHero = () => {
                 <div className="ss-exchange">
                     <p className="LexendMedium ss-title">Your Transactions</p>
 
-                    {/* Stacked transactions: keep absolute layout; just fade/slide in */}
                     <div className="ss-transactions">
                         <div className="ss-transactionsContainer">
                             {list.map((trans, index) => (
@@ -117,14 +113,12 @@ const HomeHero = () => {
                             ))}
                         </div>
                     </div>
-
-                    {/* Floating abstract arrow (super subtle) */}
                     <motion.div
                         className="ss-abstractImg gpu"
                         animate={
                             prefersReduced
                                 ? {}
-                                : { y: [0, -6, 0] } // tiny bob
+                                : { y: [0, -6, 0] }
                         }
                         transition={{ duration: 6, ease: "easeInOut", repeat: Infinity }}
                     >
@@ -136,7 +130,6 @@ const HomeHero = () => {
                         </div>
                     </motion.div>
 
-                    {/* Income chip: little pop-in + idle shimmer */}
                     <motion.div
                         className="ss-income gpu"
                         initial={{ opacity: 0, y: -8 }}
@@ -166,7 +159,6 @@ const HomeHero = () => {
                         </div>
                     </motion.div>
 
-                    {/* Money Exchange */}
                     <motion.div
                         className="ss-moneyExchange"
                         variants={stagger}
@@ -216,7 +208,6 @@ const HomeHero = () => {
                     </motion.div>
                 </div>
 
-                {/* Supported Currency pill */}
                 <motion.div
                     className="ss-supportedCurrencyContainer"
                     initial={{ opacity: 0, y: 10 }}

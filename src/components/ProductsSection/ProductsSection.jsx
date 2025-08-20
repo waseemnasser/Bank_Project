@@ -40,7 +40,6 @@ export default function ProductsSection() {
         handleUserTypeChange={handleUserTypeChange}
       />
 
-      {/* Animated grid */}
       <motion.div
         className="rh-products-cards"
         variants={container}
@@ -48,11 +47,10 @@ export default function ProductsSection() {
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}
       >
-        {/* Animate list on filter switch */}
         <AnimatePresence mode="wait">
           <motion.div
-            key={userType} // triggers crossfade on Individuals <-> Businesses
-            className="rh-products-cards" // keep same layout & CSS rules
+            key={userType} 
+            className="rh-products-cards" 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 0.25 } }}
             exit={{ opacity: 0, transition: { duration: 0.2 } }}
@@ -69,7 +67,6 @@ export default function ProductsSection() {
                 whileTap={prefersReduced ? {} : { scale: 0.99 }}
                 transition={{ duration: 0.25 }}
               >
-                {/* Icon slight pop-in */}
                 <motion.div
                   initial={prefersReduced ? {} : { opacity: 0, scale: 0.95 }}
                   animate={prefersReduced ? {} : { opacity: 1, scale: 1 }}
@@ -78,7 +75,6 @@ export default function ProductsSection() {
                   <IconShape icon={product.icon} size={80} className="rh-icon-center" />
                 </motion.div>
 
-                {/* Title / description fade-up */}
                 <motion.h2
                   className="LexendRegular"
                   initial={{ opacity: 0, y: 8 }}
