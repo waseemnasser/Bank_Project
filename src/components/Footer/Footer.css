@@ -5,9 +5,9 @@
   align-items: center;
 }
 
-
 footer {
   background-color: var(--primary-color);
+  animation: fadeInFooter 1s ease-in-out forwards;
 }
 
 .aa-footer {
@@ -17,8 +17,9 @@ footer {
   max-width: 83%;
   margin: 0 auto;
   padding-top: 100px;
-  padding-bottom : 50px;
+  padding-bottom: 50px;
   row-gap: clamp(24px, 4vw, 50px);
+  animation: slideUp 1s ease-in-out forwards;
 }
 
 .aa-ul {
@@ -31,15 +32,28 @@ footer {
   text-decoration: none;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease;
+}
+
+.aa-general-ul a:hover {
+  color: var(--button-keyworld-color);
+  transform: translateY(-2px);
 }
 
 img {
   width: 155.83px;
+  transition: transform 0.3s ease;
+}
+
+.aa-footer img:hover {
+  transform: scale(1.05);
 }
 
 .aa-border-bottom {
   border-bottom: 1px solid var(--second-color);
   width: 100%;
+  opacity: 0.6;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
 .aa-general-ul a img {
@@ -53,7 +67,7 @@ img {
 
 .aa-footer-icon {
   width: 24px;
-
+  transition: all 0.3s ease;
 }
 
 .aa-footer-social-ul {
@@ -62,6 +76,7 @@ img {
 
 .aa-footer-description {
   margin: 28px 30px 28px 0px;
+  transition: color 0.3s ease;
 }
 
 .aa-footer-social {
@@ -73,6 +88,12 @@ img {
   align-items: center;
   justify-content: center;
   margin-right: 14px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.aa-footer-social:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 0 12px var(--button-keyworld-color);
 }
 
 .aa-footer-social a img {
@@ -86,10 +107,10 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   border: 1px solid var(--second-color);
   border-radius: 100px;
   background-color: var(--third-color);
+  animation: fadeIn 1.2s ease-in-out forwards;
 }
 
 .aa-footer-description {
@@ -101,14 +122,46 @@ img {
   border: 1px solid var(--paragraph-color);
 }
 
-
-
-@media screen and (max-width:1440px) {
-
-  .aa-footer {
-    padding-top : 60px;
-    padding-bottom : 30px;
+/* ---------------------- Animations ---------------------- */
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
   }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------------------- Responsive ---------------------- */
+@media screen and (max-width:1440px) {
+  .aa-footer {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
   .Terms-of-Service {
     width: 88.888vw;
   }
@@ -120,13 +173,13 @@ img {
   .aa-general-ul {
     justify-content: center;
   }
-
 }
 
 @media screen and (max-width: 992px) {
   .aa-footer {
     padding: 30px 0;
   }
+
   .Terms-of-Service {
     flex-direction: column;
     align-items: center;
@@ -150,8 +203,9 @@ img {
   .aa-footer-description {
     font-size: 14px;
     text-align: center;
-    margin: 20px auto
+    margin: 20px auto;
   }
+
   .aa-border-bottom {
     margin: 30px 0;
   }

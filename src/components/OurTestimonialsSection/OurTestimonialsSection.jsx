@@ -1,18 +1,25 @@
-
 import { useState } from "react";
-// import FooterTitle from "../FooterTitle/FooterTitle";
 import { SectionTitle } from "../SectionTitle/SectionTitle";
 import { SliderSec } from "../SliderSec/SliderSec";
+import { motion } from "framer-motion";
+
+const ease = [0.22, 1, 0.36, 1];
 
 function OurTestimonialsSiction() {
-  const [userType, setUserType] = useState('Individuals');
+  const [userType, setUserType] = useState("Individuals");
 
   const handleUserTypeChange = (type) => {
     setUserType(type);
   };
 
   return (
-    <section className="white-space section-MarginBottom">
+    <motion.section
+      className="white-space section-MarginBottom"
+      initial={{ opacity: 0, y: 18 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.25 }}
+      transition={{ duration: 0.45, ease }}
+    >
       <SectionTitle
         titlewhite="Our"
         titlegreen=" Testimonials"
@@ -21,8 +28,9 @@ function OurTestimonialsSiction() {
         handleUserTypeChange={handleUserTypeChange}
         userType={userType}
       />
+
       <SliderSec userType={userType} />
-    </section>
+    </motion.section>
   );
 }
 

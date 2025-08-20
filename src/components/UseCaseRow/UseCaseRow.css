@@ -8,8 +8,9 @@
         width: 38.96vw;
         padding: 50px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, max-content);
         justify-content: center;
+        /* centers the grid itself */
         gap: 20px;
         border-radius: 20px;
         background-color: var(--primary-color);
@@ -161,7 +162,7 @@
         .WN_UseCaseCards {
             width: 100%;
             padding: 20px;
-            justify-items: center;
+            justify-content: center;
         }
 
         .ss-useCasesIndivs {

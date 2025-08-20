@@ -10,6 +10,7 @@ import Security from "./pages/Security";
 import About from "./pages/About";
 import NavBar from "./components/navBar/NavBar";
 import Footer from "./components/Footer/Footer";
+import Dashboard from "./components/Dashboard/Dashboard";
 import "./App.css";
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/security" element={<PageWrapper variant="slide"><Security /></PageWrapper>} />
           <Route path="/login" element={<PageWrapper variant="zoom"><Login /></PageWrapper>} />
           <Route path="/signup" element={<PageWrapper variant="zoom"><SignUp /></PageWrapper>} />
+          <Route path="/dashboard" element={<PageWrapper variant="slide"><Dashboard /></PageWrapper>} />
         </Routes>
       </AnimatePresence>
 

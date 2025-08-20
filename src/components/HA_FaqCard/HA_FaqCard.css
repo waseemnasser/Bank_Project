@@ -1,6 +1,5 @@
 .faqCard {
   padding: 50px;
-  background-color: var(--second-color);
   border: 1px solid var(--second-color);
   border-radius: 14px;
   display: flex;
@@ -8,6 +7,13 @@
   width: 40.7vw;
   height: 400px;
   background-color: var(--third-color);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.faqCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, .25);
+  border-color: var(--second-color);
 }
 
 .title {
@@ -38,6 +44,9 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(280px, 1fr));
   gap: 30px;
+
+  /* added */
+  position: relative;
 }
 
 .aa-faq-container-card> :nth-last-child(-n+2) {
@@ -58,6 +67,18 @@
   font-size: 18px;
   cursor: pointer;
   font-size: 18px;
+
+  /* added */
+  transition: transform .15s ease, box-shadow .2s ease, filter .2s ease, opacity .2s ease;
+}
+
+.aa-faq-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .25);
+}
+
+.aa-faq-btn:active {
+  transform: scale(.98);
 }
 
 .aa-hide-content {
@@ -81,24 +102,18 @@
   margin: 20px auto 0 auto;
   font-size: 18px;
   cursor: pointer;
+
+  /* added */
+  transition: transform .15s ease, box-shadow .2s ease, filter .2s ease, opacity .2s ease;
 }
 
-/* .card-shadow {
-  border: 2px solid;
-  background: linear-gradient(to bottom, #262626, #1C1C1C);
-  border-image: linear-gradient(to bottom, #262626, #1C1C1C);
-  border-radius: 30px;
-  border-image-slice: 1;
-  border-bottom: none;
-  border-radius: 14px;
-} */
+.aa-change-content:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .25);
+}
 
-.card-shadow-text {
-  background: linear-gradient(to bottom, #e4e1e1, #5c5b5b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+.aa-change-content:active {
+  transform: scale(.98);
 }
 
 .aa-faq-btn img {
@@ -113,6 +128,20 @@
 
 .aa-container-normal-height {
   max-height: 1700px;
+
+  /* added for smoother expand */
+  transition: max-height .5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* added fade effect for bottom when collapsed */
+.aa-fade-mask {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80px;
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, rgba(26, 26, 26, .9) 80%, rgba(26, 26, 26, 1) 100%);
 }
 
 @media screen and (max-width:1440px) {
@@ -144,7 +173,6 @@
   .title {
     width: 32.8vw;
     font-size: 18px;
-
   }
 
   .divider {
@@ -152,7 +180,6 @@
     margin: 24px 0;
   }
 }
-
 
 @media screen and (max-width:992px) {
   .aa-faq-container-card {
