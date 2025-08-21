@@ -1,4 +1,6 @@
 .rh_containr {
+    width: 69.063vw;
+    margin: 0 auto;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -159,6 +161,7 @@
 
 @media screen and (max-width:1440px) {
     .rh_containr {
+        width: 73.888vw;
         margin-top: 50px;
         margin-bottom: 50px;
         padding: 80px 0;
@@ -232,8 +235,7 @@
 
 @media screen and (max-width:992px) {
     .rh_containr {
-        margin-top: 30px;
-        margin-bottom: 30px;
+        width: 91.79vw;
         border-radius: 20px;
         padding: 30px;
 
@@ -267,7 +269,6 @@
                 gap: 20px;
 
                 input {
-                    /* width: 76.4102vw; */
                     width: 100%;
                     padding: 16px;
                     margin-bottom: 0;

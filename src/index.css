@@ -20,34 +20,6 @@
   --login-paragraph: #bfbfbf;
 }
 
-/*  Inter Fonts */
-@font-face {
-  font-family: InterRegular18;
-  src: url("/assets/fonts/Inter/Inter_18pt-Regular.ttf");
-}
-
-@font-face {
-  font-family: InterRegular24;
-  src: url("/assets/fonts/Inter/Inter_24pt-Regular.ttf");
-}
-
-@font-face {
-  font-family: InterRegular28;
-  src: url("/assets/fonts/Inter/Inter_28pt-Regular.ttf");
-}
-
-.InterRegular18 {
-  font-family: InterRegular18;
-}
-
-.InterRegular24 {
-  font-family: InterRegular24;
-}
-
-.InterRegular28 {
-  font-family: InterRegular28;
-}
-
 /*  Lexend Fonts */
 @font-face {
   font-family: LexendLight;
@@ -85,10 +57,12 @@
   font-family: LexendSemiBold;
 }
 
-.section-MarginBottom{
+.section-MarginBottom {
   margin-bottom: 150px !important;
 }
-.hero-mt , .homeHero-mt{
+
+.hero-mt,
+.homeHero-mt {
   margin-top: 198px !important;
 }
 

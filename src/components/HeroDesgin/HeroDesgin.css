@@ -6,6 +6,7 @@
   position: relative;
   padding: 50px 0;
   min-height: 816px;
+  border-radius: 20px;
 
   .rh-heroLeft {
     width: 41.2vw;
