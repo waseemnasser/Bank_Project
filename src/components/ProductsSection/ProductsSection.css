@@ -5,13 +5,13 @@
 }
 
 .rh-products-cards> :first-child {
-  border-right: 1px solid var(--second-color);
   padding-right: 50px;
   width: 26.82vw;
 }
 
 .rh-products-cards> :nth-child(2) {
   border-right: 1px solid var(--second-color);
+  border-left: 1px solid var(--second-color);
   padding: 0 50px;
   width: 29.43vw;
 }
@@ -83,19 +83,20 @@
     width: 100%;
   }
 
-  .rh-products-cards> :nth-child(-n+2) {
-    border-bottom: 1px solid var(--second-color);
-    border-right: none;
-  }
 
   .rh-products-cards> :first-child {
     width: 100%;
-    padding: 0 0 30px;
+    padding: 0 0;
   }
 
   .rh-products-cards> :nth-child(2) {
     padding: 0 0 30px;
     width: 100%;
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid var(--second-color);
+    border-bottom: 1px solid var(--second-color);
+    padding-top: 30px;
   }
 
   .rh-products-cards> :nth-child(3) {

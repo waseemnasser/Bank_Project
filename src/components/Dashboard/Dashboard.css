@@ -6,7 +6,7 @@
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(6px);
     border-radius: 20px;
-    padding: 40px;
+    padding: 20px;
 }
 
 /* FORM CARD */
@@ -81,22 +81,29 @@
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 16px;
     padding: 16px;
+    margin: 0 auto;
 }
 
 .ss-dashFAQ table {
-    width: 100%;
     border-collapse: separate;
     border-spacing: 0;
 }
 
 .ss-dashFAQ thead tr {
-    text-align: left;
+    text-align: center;
     color: var(--button-keyworld-color);
 }
 
-.ss-dashFAQ thead th {
-    padding: 14px 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+.headTitle {
+    max-width: 100px;
+}
+
+.headPara {
+    max-width: 400px;
+}
+
+.actionHead {
+    width: 90px;
 }
 
 .ss-dashFAQ tbody tr td {
@@ -116,7 +123,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .btns .btn {
@@ -125,7 +132,7 @@
     justify-content: center;
     font-size: 14px;
     font-weight: 500;
-    padding: 6px 14px;
+    padding: 6px;
     border-radius: 8px;
     border: 1px solid transparent;
     cursor: pointer;
@@ -189,22 +196,23 @@
     cursor: pointer;
 }
 
-/* Responsive */
-/* Responsive */
 @media screen and (max-width: 1440px) {
-    .ss-dashContainer {
-        padding: 80px;
+    .btns .btn {
+        font-size: 12px;
+        width: 90px;
     }
+
 }
 
 @media screen and (max-width: 992px) {
-    .ss-dashContainer {
-        padding: 40px;
-    }
 
     .ss-dashForm form {
         flex-direction: column;
         gap: 20px;
+    }
+
+    .btns .btn {
+        width: 80px;
     }
 
     .ss-dashForm .ss-dashFormDiv input {
@@ -226,11 +234,10 @@
     }
 
     .ss-dashFAQ tbody td {
-        max-width: 140px;
-        /* adjust per column */
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        max-width: 100px;
     }
 
     .ss-dashFAQ .ss-title {
@@ -241,20 +248,6 @@
         max-width: 160px;
     }
 
-    .ss-dashFAQ .btns {
-        max-width: 120px;
-    }
-
     /* Buttons row layout */
-    .btns {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 6px;
-    }
-
-    .btns .btn {
-        font-size: 13px;
-        padding: 6px 12px;
-        border-radius: 6px;
-    }
+    .btns {}
 }

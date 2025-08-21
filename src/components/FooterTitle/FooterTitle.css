@@ -5,10 +5,11 @@
 .FooterTitle {
     width: 100%;
     border-radius: 20px;
-    height: 288px;
+    min-height: 288px;
     background-color: var(--third-color);
     background-image: url("/assets/images/AbstractDesign/asfalt-light.png");
-    background-position: top;
+    background-position: left;
+    background-size: cover;
     border: 1px solid var(--card-title-color);
     padding: 80px;
     display: flex;
@@ -28,8 +29,9 @@
     }
 
     .FT-text-container {
-        max-width: 1103px;
+
         .FT-title {
+            max-width: 960px;
             font-weight: 400;
             font-size: 40px;
             margin-bottom: 14px;
@@ -41,6 +43,7 @@
         }
 
         .FT-des {
+            max-width: 1103px;
             font-weight: 300;
             color: var(--paragraph-color);
             line-height: 150%;
@@ -51,9 +54,8 @@
     .linkFooterTitle {
         text-decoration: none;
         background-color: var(--button-keyworld-color);
-        padding: 18px 30px;
         border-radius: 82px;
-        max-width: 183px;
+        width: 183px;
         height: 63px;
         display: flex;
         justify-content: center;
@@ -64,14 +66,14 @@
             color: var(--primary-color);
             font-size: 18px;
             line-height: 150%;
-            width: 123px;
+            text-align: center;
         }
     }
 }
 
 @media screen and (max-width:1440px) {
     .FooterTitle {
-        height: 223px;
+        min-height: 223px;
         padding: 60px;
 
         img {
@@ -79,10 +81,20 @@
             height: 192px;
         }
 
+        .linkFooterTitle {
+            width: 136px;
+            height: 49px;
+
+            p {
+                font-size: 14px;
+            }
+        }
+
         .FT-text-container {
             .FT-title {
                 font-size: 30px;
                 margin-bottom: 10px;
+                max-width: 720px;
             }
 
             .FT-des {
@@ -115,32 +127,37 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+        gap: 24px;
 
-        img {
-            width: 151px;
-            height: 143px;
-        }
-
-        .FT-title {
-            h3 {
-                font-size: 24px;
-                margin-bottom: 14px;
-            }
-
-            .FT-des {
-                font-size: 14px;
-            }
-        }
-
-        button {
-            padding: 14px 24px;
-            max-width: 144px;
+        .linkFooterTitle {
+            width: 144px;
             height: 49px;
+        }
+            img {
+                width: 151px;
+                height: 143px;
+            }
 
-            p {
-                font-size: 14px;
-                width: 96px;
+            .FT-title {
+                h3 {
+                    font-size: 24px;
+                    margin-bottom: 14px;
+                }
+
+                .FT-des {
+                    font-size: 14px;
+                }
+            }
+
+            button {
+                padding: 14px 24px;
+                max-width: 144px;
+                height: 49px;
+
+                p {
+                    font-size: 14px;
+                    width: 96px;
+                }
             }
         }
     }
-}

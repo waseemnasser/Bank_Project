@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 export const HA_FaqCard_Data = [
   {
     title: "How do I open an account with YourBank?",
@@ -48,5 +50,9 @@ export const HA_FaqCard_Data = [
     id: "5"
   },
 ];
-const data = JSON.stringify(HA_FaqCard_Data)
-localStorage.setItem('faqData', data)
+function faq_Data() {
+  useEffect(() => {
+    const data = JSON.stringify(HA_FaqCard_Data)
+    localStorage.setItem('faqData', data)
+  }, [])
+}
