@@ -14,7 +14,7 @@
         gap: 20px;
         border-radius: 20px;
         background-color: var(--primary-color);
-        background-image: url("assets/images/AbstractDesign/AbstractDesign.png");
+        background-image: url("/Bank_Project/assets/images/AbstractDesign/AbstractDesign.png");
         background-repeat: no-repeat;
         background-position: top left;
     }
@@ -95,7 +95,7 @@
 
 .ss-useCases.ss-reverce {
     .WN_UseCaseCards {
-        background-image: url("assets/images/AbstractDesign/abstractDesign2.png");
+        background-image: url("/Bank_Project/assets/images/AbstractDesign/abstractDesign2.png");
         background-position: top right;
     }
 }
