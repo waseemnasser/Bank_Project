@@ -1,3 +1,5 @@
+// App.jsx
+import { Suspense, lazy } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import PageWrapper from "./components/Animation/PageWrapper";
@@ -8,9 +10,10 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Security from "./pages/Security";
 import About from "./pages/About";
+const Dashboard = lazy(() => import("./components/Dashboard/Dashboard"));
+
 import NavBar from "./components/navBar/NavBar";
 import Footer from "./components/Footer/Footer";
-import Dashboard from "./components/Dashboard/Dashboard";
 import "./App.css";
 
 export default function App() {
@@ -28,7 +31,17 @@ export default function App() {
           <Route path="/security" element={<PageWrapper variant="slide"><Security /></PageWrapper>} />
           <Route path="/login" element={<PageWrapper variant="zoom"><Login /></PageWrapper>} />
           <Route path="/signup" element={<PageWrapper variant="zoom"><SignUp /></PageWrapper>} />
-          <Route path="/dashboard" element={<PageWrapper variant="slide"><Dashboard /></PageWrapper>} />
+
+          <Route
+            path="/dashboard"
+            element={
+              <PageWrapper variant="slide">
+                <Suspense fallback={null}>
+                  <Dashboard />
+                </Suspense>
+              </PageWrapper>
+            }
+          />
         </Routes>
       </AnimatePresence>
 
