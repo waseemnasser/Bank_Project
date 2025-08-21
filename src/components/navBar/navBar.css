@@ -1,3 +1,4 @@
+
 .ss-navShow {
     width: 100vw !important;
     border-radius: 0 !important;
@@ -18,12 +19,12 @@
     position: fixed;
     width: calc(100vw - 8.4375vw - 8.4375vw);
     z-index: 5;
-    transition: all 0.5s;
 }
 
 .ss-navLogo {
     width: 155.83px;
 }
+
 
 .ss-navUl {
     list-style: none;
@@ -32,17 +33,40 @@
     justify-content: space-between;
 }
 
-
-.ss-navUl li a {
+.ss-navUl a {
     color: white;
     text-decoration: none;
     font-size: 18px;
 }
 
-.ss-navUl .ss-link-active {
-    background-color: var(--second-color);
+.ss-li {
+    position: relative;
+}
+
+.ss-link {
+    position: relative;
+    display: inline-block;
     padding: 12px 24px;
     border-radius: 82px;
+}
+
+.ss-link-label {
+    position: relative;
+    z-index: 2;
+}
+
+.ss-link-active {
+    background: transparent;
+}
+
+.ss-active-pill {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background: var(--second-color);
+    border-radius: 82px;
+    z-index: 1;
+    pointer-events: none;
+    box-shadow: 0 4px 16px rgba(0,0,0,.25), inset 0 0 0 1px rgba(255,255,255,0.04);
 }
 
 .ss-buttonsDiv {
@@ -76,6 +100,18 @@
     cursor: pointer;
 }
 
+.ss-menuIcon {
+    width: 56px;
+}
+
+.ss-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.25);
+    opacity: 0;
+    z-index: 4;
+}
+
 .ss-mobile-nav {
     display: none;
     background-color: var(--primary-color);
@@ -86,28 +122,29 @@
     position: absolute;
     top: -40px;
     left: 0;
-    z-index: 3;
-    transform: translateX(calc(-100vw - 72px));
-    transition: all 0.6s ease;
+    z-index: 6;
+    transform: translateX(calc(-100vw - 72px)); 
 }
 
 .ss-mobile-nav-iconContainer {
+    position: absolute;
+    right: 50px;
+    top: 70px;
     width: 40px;
     height: 40px;
     background-color: var(--button-keyworld-color);
-    transform: translateX(90vw);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 24px;
     border: none;
     border-radius: 12px;
     cursor: pointer;
 }
 
 .ss-mobile-nav-iconContainer img {
+    width: 22px;
+    height: 22px;
     transform: rotate(45deg);
-    width: 30px;
 }
 
 .ss-mobile-navList {
@@ -140,6 +177,7 @@
     .ss-navShow {
         padding: 0 24px;
         width: calc(100vw - 5.5555vw - 5.5555vw);
+        height: 73px;
     }
 
     .ss-navShow {
@@ -156,11 +194,11 @@
         width: 116.86px;
     }
 
-    .ss-navUl li a {
+    .ss-navUl a {
         font-size: 14px;
     }
 
-    .ss-navUl .ss-link-active {
+    .ss-link {
         padding: 10px 18px;
     }
 }
@@ -171,6 +209,7 @@
     .ss-navShow {
         width: calc(100vw - 3.0769vw - 3.0769vw);
         padding: 0 14px;
+        height: 68px;
     }
 
     .ss-navShow {
@@ -201,7 +240,4 @@
         flex-direction: column;
     }
 
-    .ss-mobile-nav.ss-show {
-        transform: translateX(-72px);
-    }
 }
