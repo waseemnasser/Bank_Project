@@ -26,10 +26,8 @@ export default function Dashboard() {
     }, [faqArr]);
 
     // next numeric id
-    const nextId = useMemo(() => {
-        const max = faqArr.reduce((m, f) => Math.max(m, Number(f.id || 0)), 0);
-        return max + 1;
-    }, [faqArr]);
+    let nextId = faqArr.length > 0 ? parseInt(faqArr[faqArr.length - 1].id) + 1 : 0;
+    nextId = nextId + ""
 
     // add
     const onAdd = (e) => {
@@ -89,7 +87,7 @@ export default function Dashboard() {
 
     return (
         <motion.div
-            className="white-space ss-dashContainer hero-mt"
+            className="white-space ss-dashContainer hero-mt section-MarginBottom"
             variants={section}
             initial="hidden"
             animate="show"
@@ -142,9 +140,9 @@ export default function Dashboard() {
                 <table>
                     <thead>
                         <tr>
-                            <th className="LexendRegular">Title</th>
-                            <th className="LexendRegular">Paragraph</th>
-                            <th className="LexendRegular">Actions</th>
+                            <th className="LexendRegular headTitle">Title</th>
+                            <th className="LexendRegular headPara">Paragraph</th>
+                            <th className="LexendRegular actionHead">Actions</th>
                         </tr>
                     </thead>
 

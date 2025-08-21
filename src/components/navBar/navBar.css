@@ -28,8 +28,8 @@
 .ss-navUl {
     list-style: none;
     display: flex;
+    gap: 17px;
     justify-content: space-between;
-    gap: 26px;
 }
 
 
@@ -45,10 +45,15 @@
     border-radius: 82px;
 }
 
+.ss-buttonsDiv {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
 .ss-buttonsDiv button {
     background: none;
     border: none;
-    margin-right: 30px;
 }
 
 .ss-buttonsDiv button a {
@@ -136,11 +141,16 @@
         padding: 0 24px;
         width: calc(100vw - 5.5555vw - 5.5555vw);
     }
+
     .ss-navShow {
         padding-left: 5.5555vw !important;
         padding-right: 5.5555vw !important;
     }
 
+    .ss-buttonsDiv {
+        display: flex;
+        gap: 20px;
+    }
 
     .ss-navLogo {
         width: 116.86px;
@@ -162,9 +172,10 @@
         width: calc(100vw - 3.0769vw - 3.0769vw);
         padding: 0 14px;
     }
+
     .ss-navShow {
-        padding-left: 3.0769vw;
-        padding-right: 3.0769vw;
+        padding-left: 3.0769vw !important;
+        padding-right: 3.0769vw !important;
     }
 
     .ss-navLogo {
