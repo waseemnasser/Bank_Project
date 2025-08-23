@@ -1,35 +1,40 @@
 import "./Dashboard.css";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { HA_FaqCard_Data } from "../../data/HA_FaqCard_Data";
 
 const ease = [0.22, 1, 0.36, 1];
 
 export default function Dashboard() {
-    // LS bootstrap
+    const editTitleRef = useRef(null);
+
     const [faqArr, setFaqArr] = useState(
         () => JSON.parse(localStorage.getItem("faqData")) || []
     );
 
-    // form states
     const [title, setTitle] = useState("");
     const [paragraph, setParagraph] = useState("");
 
-    // inline edit states
-    const [editingTitleId, setEditingTitleId] = useState(null);
-    const [editingDesId, setEditingDesId] = useState(null);
-    const [editTitleValue, setEditTitleValue] = useState("");
-    const [editDesValue, setEditDesValue] = useState("");
+    const [editTitle, setEditTitle] = useState("");
+    const [editParagraph, setEditParagraph] = useState("");
 
-    // persist to LS
+    const [showEditForm, setShowEditForm] = useState(false);
+    const [faqId, setFaqId] = useState(0);
+
     useEffect(() => {
         localStorage.setItem("faqData", JSON.stringify(faqArr));
     }, [faqArr]);
 
-    // next numeric id
-    let nextId = faqArr.length > 0 ? parseInt(faqArr[faqArr.length - 1].id) + 1 : 0;
-    nextId = nextId + ""
+    useEffect(() => {
+        if (showEditForm && editTitleRef.current) {
+            editTitleRef.current.focus();
+        }
+    }, [showEditForm]);
 
-    // add
+    let nextId =
+        faqArr.length > 0 ? parseInt(faqArr[faqArr.length - 1].id) + 1 : 0;
+    nextId = nextId + "";
+
     const onAdd = (e) => {
         e.preventDefault();
         if (!title.trim() || !paragraph.trim()) return;
@@ -41,42 +46,42 @@ export default function Dashboard() {
         setParagraph("");
     };
 
-    // delete
     const onDelete = (id) => {
         setFaqArr((prev) => prev.filter((f) => f.id !== id));
     };
 
-    // start edit title
-    const startEditTitle = (faq) => {
-        setEditingTitleId(faq.id);
-        setEditTitleValue(faq.title);
-    };
-    const submitEditTitle = (e, id) => {
+    const onEditForm = (e) => {
         e.preventDefault();
         setFaqArr((prev) =>
-            prev.map((f) => (f.id === id ? { ...f, title: editTitleValue } : f))
+            prev.map((f) =>
+                f.id == faqId ? { ...f, title: editTitle, des: editParagraph } : f
+            )
         );
-        setEditingTitleId(null);
+        setShowEditForm(false);
     };
 
-    const startEditDes = (faq) => {
-        setEditingDesId(faq.id);
-        setEditDesValue(faq.des);
+    const handleScrollTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
     };
-    const submitEditDes = (e, id) => {
-        e.preventDefault();
-        setFaqArr((prev) =>
-            prev.map((f) => (f.id === id ? { ...f, des: editDesValue } : f))
-        );
-        setEditingDesId(null);
+
+    const onReset = () => {
+        setFaqArr(HA_FaqCard_Data);
+        localStorage.setItem("faqData", JSON.stringify(HA_FaqCard_Data));
     };
+
     const section = {
         hidden: { opacity: 0, y: 18 },
         show: { opacity: 1, y: 0, transition: { duration: 0.45, ease } },
     };
+
     const row = {
         hidden: { opacity: 0, y: 10, scale: 0.995 },
-        show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.28, ease } },
+        show: {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            transition: { duration: 0.28, ease },
+        },
         exit: {
             opacity: 0,
             y: -8,
@@ -87,62 +92,108 @@ export default function Dashboard() {
 
     return (
         <motion.div
-            className="white-space ss-dashContainer hero-mt section-MarginBottom"
+            className="white-space ss-dashContainer hero-mt"
             variants={section}
             initial="hidden"
             animate="show"
         >
-            <div className="ss-dashForm">
-                <h2 className="LexendRegular">Add New FAQ</h2>
-                <form onSubmit={onAdd}>
-                    <div className="ss-dashFormDiv">
-                        <label htmlFor="title" className="LexendRegular">
-                            Title :
-                        </label>
-                        <input
-                            type="text"
-                            id="title"
-                            placeholder="Enter Title"
-                            className="LexendRegular"
-                            value={title}
-                            onChange={(e) => setTitle(e.target.value)}
-                        />
-                    </div>
-                    <div className="ss-dashFormDiv">
-                        <label htmlFor="paragraph" className="LexendRegular">
-                            Paragraph :
-                        </label>
-                        <input
-                            type="text"
-                            id="paragraph"
-                            placeholder="Enter Paragraph"
-                            className="LexendRegular"
-                            value={paragraph}
-                            onChange={(e) => setParagraph(e.target.value)}
-                        />
-                    </div>
-                </form>
-                <div className="ss-dashFormButton">
-                    <motion.button
-                        type="submit"
-                        className="LexendRegular"
-                        onClick={onAdd}
-                        whileHover={{ y: -2 }}
-                        whileTap={{ scale: 0.98 }}
-                        transition={{ duration: 0.15 }}
-                    >
-                        Add FAQ
-                    </motion.button>
+            {showEditForm ? (
+                <div className="ss-dashForm">
+                    <h2 className="LexendRegular">Edit FAQ</h2>
+                    <form onSubmit={onEditForm}>
+                        <div className="ss-dashFormDiv">
+                            <label htmlFor="title" className="LexendRegular">
+                                Edit Title :
+                            </label>
+                            <input
+                                type="text"
+                                id="title"
+                                placeholder="Enter Title"
+                                className="LexendRegular"
+                                value={editTitle}
+                                onChange={(e) => setEditTitle(e.target.value)}
+                                ref={editTitleRef}
+                            />
+                        </div>
+                        <div className="ss-dashFormDiv">
+                            <label htmlFor="paragraph" className="LexendRegular">
+                                Edit Paragraph :
+                            </label>
+                            <input
+                                type="text"
+                                id="paragraph"
+                                placeholder="Enter Paragraph"
+                                className="LexendRegular"
+                                value={editParagraph}
+                                onChange={(e) => setEditParagraph(e.target.value)}
+                            />
+                        </div>
+                        <div className="ss-dashFormButton">
+                            <motion.button
+                                type="submit"
+                                className="LexendRegular"
+                                whileHover={{ y: -2 }}
+                                whileTap={{ scale: 0.98 }}
+                                transition={{ duration: 0.15 }}
+                            >
+                                Edit FAQ
+                            </motion.button>
+                        </div>
+                    </form>
                 </div>
-            </div>
+            ) : (
+                <div className="ss-dashForm">
+                    <h2 className="LexendRegular">Add New FAQ</h2>
+                    <form onSubmit={onAdd}>
+                        <div className="ss-dashFormDiv">
+                            <label htmlFor="title" className="LexendRegular">
+                                Title :
+                            </label>
+                            <input
+                                type="text"
+                                id="title"
+                                placeholder="Enter Title"
+                                className="LexendRegular"
+                                value={title}
+                                onChange={(e) => setTitle(e.target.value)}
+                            />
+                        </div>
+                        <div className="ss-dashFormDiv">
+                            <label htmlFor="paragraph" className="LexendRegular">
+                                Paragraph :
+                            </label>
+                            <input
+                                type="text"
+                                id="paragraph"
+                                placeholder="Enter Paragraph"
+                                className="LexendRegular"
+                                value={paragraph}
+                                onChange={(e) => setParagraph(e.target.value)}
+                            />
+                        </div>
+                        <div className="ss-dashFormButton">
+                            <motion.button
+                                type="submit"
+                                className="LexendRegular"
+                                onClick={onAdd}
+                                whileHover={{ y: -2 }}
+                                whileTap={{ scale: 0.98 }}
+                                transition={{ duration: 0.15 }}
+                            >
+                                Add FAQ
+                            </motion.button>
+                        </div>
+                    </form>
+                </div>
+            )}
 
             <div className="ss-dashFAQ">
                 <table>
                     <thead>
                         <tr>
-                            <th className="LexendRegular headTitle">Title</th>
-                            <th className="LexendRegular headPara">Paragraph</th>
-                            <th className="LexendRegular actionHead">Actions</th>
+                            <th className="LexendRegular">Title</th>
+                            <th className="LexendRegular">Paragraph</th>
+                            <th className="LexendRegular">Actions</th>
                         </tr>
                     </thead>
 
@@ -156,95 +207,23 @@ export default function Dashboard() {
                                     animate="show"
                                     exit="exit"
                                 >
-                                    <td className="LexendRegular ss-title">
-                                        {editingTitleId === faq.id ? (
-                                            <form
-                                                onSubmit={(e) => submitEditTitle(e, faq.id)}
-                                                className="inline-form"
-                                            >
-                                                <input
-                                                    type="text"
-                                                    value={editTitleValue}
-                                                    onChange={(e) => setEditTitleValue(e.target.value)}
-                                                    className="inline-input LexendRegular"
-                                                    placeholder="New title"
-                                                    autoFocus
-                                                />
-                                                <motion.input
-                                                    type="submit"
-                                                    value="Save"
-                                                    className="inline-save LexendRegular"
-                                                    whileHover={{ y: -1 }}
-                                                    whileTap={{ scale: 0.98 }}
-                                                />
-                                                <button
-                                                    type="button"
-                                                    className="inline-cancel LexendRegular"
-                                                    onClick={() => setEditingTitleId(null)}
-                                                >
-                                                    Cancel
-                                                </button>
-                                            </form>
-                                        ) : (
-                                            faq.title
-                                        )}
-                                    </td>
-
-                                    <td className="LexendRegular ss-des">
-                                        {editingDesId === faq.id ? (
-                                            <form
-                                                onSubmit={(e) => submitEditDes(e, faq.id)}
-                                                className="inline-form"
-                                            >
-                                                <input
-                                                    type="text"
-                                                    value={editDesValue}
-                                                    onChange={(e) => setEditDesValue(e.target.value)}
-                                                    className="inline-input LexendRegular"
-                                                    placeholder="New description"
-                                                    autoFocus
-                                                />
-                                                <motion.input
-                                                    type="submit"
-                                                    value="Save"
-                                                    className="inline-save LexendRegular"
-                                                    whileHover={{ y: -1 }}
-                                                    whileTap={{ scale: 0.98 }}
-                                                />
-                                                <button
-                                                    type="button"
-                                                    className="inline-cancel LexendRegular"
-                                                    onClick={() => setEditingDesId(null)}
-                                                >
-                                                    Cancel
-                                                </button>
-                                            </form>
-                                        ) : (
-                                            faq.des
-                                        )}
-                                    </td>
-
+                                    <td className="LexendRegular ss-title">{faq.title}</td>
+                                    <td className="LexendRegular ss-des">{faq.des}</td>
                                     <td className="btns">
-                                        {editingTitleId === faq.id ? null : (
-                                            <motion.button
-                                                className="LexendRegular btn"
-                                                onClick={() => startEditTitle(faq)}
-                                                whileHover={{ y: -1 }}
-                                                whileTap={{ scale: 0.98 }}
-                                            >
-                                                Edit Title
-                                            </motion.button>
-                                        )}
-                                        {editingDesId === faq.id ? null : (
-                                            <motion.button
-                                                className="LexendRegular btn"
-                                                onClick={() => startEditDes(faq)}
-                                                whileHover={{ y: -1 }}
-                                                whileTap={{ scale: 0.98 }}
-                                            >
-                                                Edit Des
-                                            </motion.button>
-                                        )}
+                                        <motion.button
+                                            className="LexendRegular btn"
+                                            whileHover={{ y: -1 }}
+                                            whileTap={{ scale: 0.98 }}
+                                            onClick={() => {
+                                                setShowEditForm(true);
+                                                setFaqId(faq.id);
+                                                setEditTitle(faq.title);
+                                                setEditParagraph(faq.des);
+                                                handleScrollTop();
+                                            }}
+                                        >
+                                            Edit
+                                        </motion.button>
                                         <motion.button
                                             className="LexendRegular btn danger"
                                             onClick={() => onDelete(faq.id)}
@@ -259,6 +238,18 @@ export default function Dashboard() {
                         </tbody>
                     </AnimatePresence>
                 </table>
+            </div>
+
+            <div className="ss-dashFormButton" style={{ marginTop: "24px" }}>
+                <motion.button
+                    className="LexendRegular reset-btn"
+                    onClick={onReset}
+                    whileHover={{ y: -2 }}
+                    whileTap={{ scale: 0.98 }}
+                    transition={{ duration: 0.15 }}
+                >
+                    Reset FAQs
+                </motion.button>
             </div>
         </motion.div>
     );

@@ -18,9 +18,10 @@ import "./App.css";
 
 export default function App() {
   const location = useLocation();
+  const isHome = location.pathname === "/";
 
   return (
-    <div className="app">
+    <div className={`app ${isHome ? "home-bg" : ""}`}>
       <NavBar />
 
       <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
@@ -31,7 +32,6 @@ export default function App() {
           <Route path="/security" element={<PageWrapper variant="slide"><Security /></PageWrapper>} />
           <Route path="/login" element={<PageWrapper variant="zoom"><Login /></PageWrapper>} />
           <Route path="/signup" element={<PageWrapper variant="zoom"><SignUp /></PageWrapper>} />
-
           <Route
             path="/dashboard"
             element={
