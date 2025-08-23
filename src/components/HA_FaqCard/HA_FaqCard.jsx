@@ -1,7 +1,7 @@
 import { HA_FaqCard_Data } from "../../data/HA_FaqCard_Data";
 import "./HA_FaqCard.css";
 import { useEffect, useState } from "react";
-export default function HA_FaqCard  () {
+export default function HA_FaqCard() {
    const data = localStorage.getItem('faqData')
    console.log(data)
    const data2 = JSON.parse(data)
@@ -15,8 +15,8 @@ export default function HA_FaqCard  () {
    return (
       <div className="aa-contain">
          <div className={`aa-faq-container-card ${load ? 'aa-container-normal-height' : ' '}  aa-container-height`} >
-            {data2.map((card, index) => (
-               <div className={`card ${(index === 2 || index === 3) & !load ? "aa-card-shadow aa-card-shadow-text" : ""} faqCard      `}>
+            {data2.map((card) => (
+               <div className={` ${load ? "aa-card-shadow aa-card-shadow-text" : ""} faqCard      `}>
                   <p className="FAQ-title LexendMedium">{card.title}</p>
                   <div className="FAQ-divider"></div>
                   <p className="FAQ-des LexendLight">{card.des}</p>
