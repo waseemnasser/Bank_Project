@@ -151,7 +151,6 @@
   .aa-faq-container-card {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
-
   }
 
   .faqCard {
@@ -172,8 +171,70 @@
   }
 
   .aa-faq-container-card .faqCard:nth-child(3) {
-
     background-color: var(--second-color);
     border: 1px solid var(--second-color);
   }
+}
+
+/* ========================================================= */
+/* 🔥 Smooth Animations for Load More / Show Less */
+/* ========================================================= */
+
+@keyframes faqFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes faqFadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+/* Animate in when new FAQs appear */
+.aa-faq-container-card.aa-container-normal-height .faqCard:nth-child(n+5) {
+  animation: faqFadeInUp 450ms cubic-bezier(.22, 1, .36, 1) both;
+}
+
+/* Subtle stagger for premium effect */
+.aa-faq-container-card.aa-container-normal-height .faqCard:nth-child(5) {
+  animation-delay: 20ms;
+}
+
+.aa-faq-container-card.aa-container-normal-height .faqCard:nth-child(6) {
+  animation-delay: 40ms;
+}
+
+.aa-faq-container-card.aa-container-normal-height .faqCard:nth-child(7) {
+  animation-delay: 60ms;
+}
+
+.aa-faq-container-card.aa-container-normal-height .faqCard:nth-child(8) {
+  animation-delay: 80ms;
+}
+
+.aa-faq-container-card.aa-container-normal-height .faqCard:nth-child(9) {
+  animation-delay: 100ms;
+}
+
+.aa-faq-container-card.aa-container-normal-height .faqCard:nth-child(10) {
+  animation-delay: 120ms;
+}
+
+/* Animate out when collapsing */
+.aa-faq-container-card.aa-collapsing .faqCard:nth-child(n+5) {
+  animation: faqFadeOutDown 250ms ease both;
 }

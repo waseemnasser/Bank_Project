@@ -1,4 +1,3 @@
-
 .ss-navShow {
     width: 100vw !important;
     border-radius: 0 !important;
@@ -19,12 +18,23 @@
     position: fixed;
     width: calc(100vw - 8.4375vw - 8.4375vw);
     z-index: 5;
+
+    transition:
+        width .38s cubic-bezier(.22, 1, .36, 1),
+        padding .38s cubic-bezier(.22, 1, .36, 1),
+        border-radius .38s cubic-bezier(.22, 1, .36, 1),
+        top .38s cubic-bezier(.22, 1, .36, 1),
+        border-color .28s ease,
+        box-shadow .28s ease,
+        backdrop-filter .28s ease,
+        -webkit-backdrop-filter .28s ease;
+    will-change: width, padding, border-radius, top, backdrop-filter;
 }
 
 .ss-navLogo {
     width: 155.83px;
+    will-change: transform, opacity;
 }
-
 
 .ss-navUl {
     list-style: none;
@@ -61,12 +71,15 @@
 
 .ss-active-pill {
     position: absolute;
-    left: 0; top: 0; right: 0; bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
     background: var(--second-color);
     border-radius: 82px;
     z-index: 1;
     pointer-events: none;
-    box-shadow: 0 4px 16px rgba(0,0,0,.25), inset 0 0 0 1px rgba(255,255,255,0.04);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .25), inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
 .ss-buttonsDiv {
@@ -107,7 +120,7 @@
 .ss-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,.25);
+    background: rgba(0, 0, 0, .25);
     opacity: 0;
     z-index: 4;
 }
@@ -123,7 +136,7 @@
     top: -40px;
     left: 0;
     z-index: 6;
-    transform: translateX(calc(-100vw - 72px)); 
+    transform: translateX(calc(-100vw - 72px));
 }
 
 .ss-mobile-nav-iconContainer {
@@ -239,5 +252,12 @@
         display: flex;
         flex-direction: column;
     }
+}
 
+@media (prefers-reduced-motion: reduce) {
+
+    .ss-nav,
+    .ss-navShow {
+        transition: none;
+    }
 }

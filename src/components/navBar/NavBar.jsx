@@ -33,14 +33,21 @@ export default function NavBar() {
 
     const enterV = {
         hidden: { y: -24, opacity: 0 },
-        show: { y: 0, opacity: 1, transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } },
+        show: {
+            y: 0,
+            opacity: 1,
+            transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] },
+        },
     };
 
     const drawerV = {
         hidden: { x: "100%" },
         show: prefersReduced
             ? { x: 0, transition: { duration: 0.2 } }
-            : { x: 0, transition: { type: "spring", stiffness: 340, damping: 32 } },
+            : {
+                x: 0,
+                transition: { type: "spring", stiffness: 340, damping: 32 },
+            },
     };
 
     const overlayV = {
@@ -60,6 +67,13 @@ export default function NavBar() {
             />
 
             <motion.nav
+                layout
+                transition={{
+                    layout: {
+                        duration: 0.38,
+                        ease: [0.22, 1, 0.36, 1],
+                    },
+                }}
                 className={`${navShow ? "ss-navShow" : "white-space ss-nav"}`}
                 variants={enterV}
                 initial="hidden"
@@ -67,15 +81,26 @@ export default function NavBar() {
                 style={{
                     backdropFilter: navShow ? "blur(8px)" : "blur(0px)",
                     WebkitBackdropFilter: navShow ? "blur(8px)" : "blur(0px)",
-                    boxShadow: navShow ? "0 12px 30px rgba(0,0,0,.28)" : "none",
-                    border: navShow ? "1px solid var(--second-color)" : "1px solid transparent",
+                    boxShadow: navShow
+                        ? "0 12px 30px rgba(0,0,0,.28)"
+                        : "none",
+                    border: navShow
+                        ? "1px solid var(--second-color)"
+                        : "1px solid transparent",
                 }}
             >
                 <motion.img
                     className="ss-navLogo"
                     src="assets/images/Home/logo.png"
                     alt="nav-logo"
-                    animate={prefersReduced ? {} : { scale: navShow ? 0.96 : 1, opacity: navShow ? 0.96 : 1 }}
+                    animate={
+                        prefersReduced
+                            ? {}
+                            : {
+                                scale: navShow ? 0.96 : 1,
+                                opacity: navShow ? 0.96 : 1,
+                            }
+                    }
                     transition={{ duration: 0.25 }}
                 />
 
@@ -85,8 +110,15 @@ export default function NavBar() {
                             <NavLink to={LinkList[index]}>
                                 {({ isActive }) => (
                                     <>
-                                        <span className={`LexendRegular ss-link ${isActive ? "ss-link-active" : ""}`}>
-                                            <span className="ss-link-label">{listItem}</span>
+                                        <span
+                                            className={`LexendRegular ss-link ${isActive
+                                                    ? "ss-link-active"
+                                                    : ""
+                                                }`}
+                                        >
+                                            <span className="ss-link-label">
+                                                {listItem}
+                                            </span>
                                         </span>
                                         {isActive && (
                                             <motion.span
@@ -107,7 +139,9 @@ export default function NavBar() {
                             <NavLink
                                 to={buttonsLinksList[index]}
                                 className={({ isActive }) =>
-                                    isActive ? "ss-button-active LexendRegular" : "LexendRegular"
+                                    isActive
+                                        ? "ss-button-active LexendRegular"
+                                        : "LexendRegular"
                                 }
                             >
                                 {button}
@@ -126,7 +160,9 @@ export default function NavBar() {
                         src="assets/images/Home/Button.png"
                         alt="menu"
                         className="ss-menuIcon"
-                        animate={prefersReduced ? {} : { rotate: show ? 90 : 0 }}
+                        animate={
+                            prefersReduced ? {} : { rotate: show ? 90 : 0 }
+                        }
                         transition={{ duration: 0.25 }}
                     />
                 </motion.button>
@@ -137,8 +173,15 @@ export default function NavBar() {
                     animate={show ? "show" : "hidden"}
                     variants={drawerV}
                 >
-                    <button className="ss-mobile-nav-iconContainer" onClick={handleShow} aria-label="Close menu">
-                        <img src="assets/images/Icons/Home-icons/hero-icons/plus.svg" alt="close" />
+                    <button
+                        className="ss-mobile-nav-iconContainer"
+                        onClick={handleShow}
+                        aria-label="Close menu"
+                    >
+                        <img
+                            src="assets/images/Icons/Home-icons/hero-icons/plus.svg"
+                            alt="close"
+                        />
                     </button>
 
                     <ul className="ss-mobile-navList">
@@ -146,7 +189,9 @@ export default function NavBar() {
                             <li onClick={handleShow} key={index}>
                                 <NavLink
                                     className={({ isActive }) =>
-                                        isActive ? "ss-link-active LexendRegular" : "LexendRegular"
+                                        isActive
+                                            ? "ss-link-active LexendRegular"
+                                            : "LexendRegular"
                                     }
                                     to={LinkList[index]}
                                 >
@@ -158,7 +203,9 @@ export default function NavBar() {
                             <li onClick={handleShow} key={index}>
                                 <NavLink
                                     className={({ isActive }) =>
-                                        isActive ? "ss-link-active LexendRegular" : "LexendRegular"
+                                        isActive
+                                            ? "ss-link-active LexendRegular"
+                                            : "LexendRegular"
                                     }
                                     to={buttonsLinksList[index]}
                                 >
