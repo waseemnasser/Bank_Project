@@ -58,6 +58,7 @@
 @media screen and (max-width:992px) {
   .aa-features-card {
     width: 100%;
+    padding: 30px;
   }
 
   .aa-container-feature {

@@ -54,8 +54,6 @@
   border: 1px solid var(--second-color);
   border-radius: 50px 50px 0px 0px;
   overflow: hidden;
-
-
 }
 
 .offset-up {
@@ -141,11 +139,15 @@
 
 
 @media screen and (max-width:992px) {
-  .aa-Mv-section {
 
+  .aa-mv-container > *:nth-child(3),
+  .aa-mv-container > *:nth-child(5){
+    padding-top: 50px;
+  }
+  .aa-Mv-section {
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
+    gap: 30px;
   }
 
   .offset-up {
@@ -176,7 +178,7 @@
   }
 
   .aa-image-mission-vision {
-    margin: 50px auto 30px auto;
+    margin: 0 auto;
     border-bottom: 2px solid var(--eighth-color);
     width: 91.7%;
   }
