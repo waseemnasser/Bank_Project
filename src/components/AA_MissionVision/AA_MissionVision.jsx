@@ -40,7 +40,7 @@ export default function AA_MissionVision({ AaimageSrc, Aareverse, MvTitle, Mvdes
           transition={{ duration: 0.25 }}
         >
           <motion.div className="aa-image-wrapper" variants={imgReveal}>
-            <img className="aa-back-image" src="assets/images/AbstractDesign/abstract-dots.png" alt="" />
+            <img className="aa-back-image" src="assets/images/AbstractDesign/abstract-dots.webp" alt="" />
             <motion.img
               className="aa-image-mv"
               src={AaimageSrc}

@@ -91,7 +91,7 @@ export default function NavBar() {
             >
                 <motion.img
                     className="ss-navLogo"
-                    src="assets/images/Home/logo.png"
+                    src="assets/images/Home/logo.webp"
                     alt="nav-logo"
                     animate={
                         prefersReduced
@@ -157,7 +157,7 @@ export default function NavBar() {
                     whileTap={prefersReduced ? {} : { scale: 0.96 }}
                 >
                     <motion.img
-                        src="assets/images/Home/Button.png"
+                        src="assets/images/Home/Button.webp"
                         alt="menu"
                         className="ss-menuIcon"
                         animate={
