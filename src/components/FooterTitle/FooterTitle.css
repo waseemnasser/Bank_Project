@@ -7,7 +7,7 @@
     border-radius: 20px;
     min-height: 288px;
     background-color: var(--third-color);
-    background-image: url("/assets/images/AbstractDesign/asfalt-light.png");
+    background-image: url("/assets/images/AbstractDesign/asfalt-light.webp");
     background-position: left;
     background-size: cover;
     border: 1px solid var(--card-title-color);
@@ -127,6 +127,7 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+        background-position: top;
         gap: 24px;
 
         .linkFooterTitle {

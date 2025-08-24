@@ -8,8 +8,8 @@ export default function LogSignHero ({ title, description, isSignUp })  {
 
   return (
     <div className={`rh_containr white-space section-MarginBottom ${pathName == "/Bank_Project/" ? "homeHero-mt" : "hero-mt"}`}>
-      <img src="assets/images/logeIn-signUp/login-background.png" alt="background" className='rh-LS-background' />
-      <img src="assets/images/AbstractDesign/heroDesign.png" alt="heroDesign" className='rh-LS-background-TopRight' />
+      <img src="assets/images/logeIn-signUp/login-background.webp" alt="background" className='rh-LS-background' />
+      <img src="assets/images/AbstractDesign/heroDesign.webp" alt="heroDesign" className='rh-LS-background-TopRight' />
       <div className="rh_titelPart">
         <h1 className="LexendMedium">{title}</h1>
         <p className="LexendLight">{description}</p>

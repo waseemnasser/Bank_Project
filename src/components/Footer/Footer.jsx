@@ -27,7 +27,7 @@ export default function Footer() {
       <motion.div className="aa-footer" variants={container}>
 
         <motion.img
-          src="assets/images/Home/logo.png"
+          src="assets/images/Home/logo.webp"
           alt="logo"
           variants={item}
           whileHover={{ scale: 1.05 }}

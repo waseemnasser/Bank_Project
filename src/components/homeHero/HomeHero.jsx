@@ -124,7 +124,7 @@ export default function HomeHero () {
                     >
                         <div className="ss-abstractImg-container">
                             <img
-                                src="assets/images/AbstractDesign/AbstractArrows.png"
+                                src="assets/images/AbstractDesign/AbstractArrows.webp"
                                 alt="abstract-img"
                             />
                         </div>

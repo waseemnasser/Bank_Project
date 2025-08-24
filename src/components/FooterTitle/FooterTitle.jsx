@@ -5,7 +5,7 @@ export default function FooterTitle({ title, paragraph }) {
   return (
     <div className="FT-background section-MarginBottom">
       <div className="FooterTitle">
-        <img src="./assets/images/AbstractDesign/AbstractDesign.png" />
+        <img src="./assets/images/AbstractDesign/AbstractDesign.webp" />
         <div className="FT-text-container">
           <h3 className="LexendRegular FT-title">{title} <span>YourBank today!</span></h3>
           <p className="LexendLight FT-des">{paragraph}</p>
