@@ -1,4 +1,3 @@
-// UseCasesRow.jsx
 import "./UseCaseRow.css";
 import UseCaseCard from "../UseCaseCard/UseCaseCard";
 import { motion, useReducedMotion, useInView } from "framer-motion";
@@ -11,15 +10,13 @@ const grid = { hidden: { opacity: 0 }, show: { opacity: 1, transition: { stagger
 const card = { hidden: { opacity: 0, y: 12, scale: 0.985 }, show: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.35, ease } } };
 const stat = { hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0, transition: { duration: 0.35, ease } } };
 
-/** --- Drop-in CountUp (no style changes) --- */
 function CountUp({ value, duration = 1200, delay = 0, className = "", prefersReduced }) {
   const ref = useRef(null);
   const inView = useInView(ref, { amount: 0.6, once: true });
 
-  // Split into prefix / number / suffix. e.g. "+12.5%" -> "+", 12.5, "%"
   const parsed = useMemo(() => {
     const str = String(value).trim();
-    const match = str.match(/^(\D*?)(-?\d+(?:[.,]\d+)?)(.*)$/); // keeps first non-digits as prefix, then number, then suffix
+    const match = str.match(/^(\D*?)(-?\d+(?:[.,]\d+)?)(.*)$/);
     if (!match) return { prefix: "", num: NaN, suffix: str, decimals: 0 };
     const [, prefix, numStr, suffix] = match;
     const normalized = numStr.replace(",", ".");
@@ -133,12 +130,11 @@ export default function UseCasesRow({ useCaseData, indiv, title, para, reverce }
                 whileHover={prefersReduced ? {} : { y: -2 }}
                 transition={{ duration: 0.2 }}
               >
-                {/* swapped raw <span> with CountUp; same classes, same size */}
                 <CountUp
                   value={item.per}
                   className="LexendMedium ss-useCasesIndivsItemSpan"
                   duration={1100}
-                  delay={index * 120} // subtle stagger per item
+                  delay={index * 120}
                   prefersReduced={prefersReduced}
                 />
                 <p className="LexendLight ss-useCasesIndivsItemP">{item.title}</p>
